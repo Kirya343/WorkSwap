@@ -1,0 +1,74 @@
+{
+    "common": {
+        "save": "Сохранить",
+        "cancel": "Отмена",
+        "delete": "Удалить",
+        "edit": "Редактировать"
+    },
+
+    "login": "Войти",
+    "loginToWrite": "Войти, чтобы написать",
+    "loginGoogle": "Войти через Google",
+    "registerButton": "Завершить регистрацию",
+    "returnToCatalog": "Вернуться в каталог",
+    "createAccount": "Создать аккаунт",
+
+    "menu": {
+        "notifications": "Уведомления",
+        "helpBeBetter": "Помочь сделать сайт лучше",
+        "contactToSupport": "Связаться с разработчиком"
+    },
+    
+    "upload": {
+        "image": "Загрузить изображение"
+    },
+
+    "special": {
+        "connectTelegram": "Подключить Telegram"
+    },
+
+    "listing": {
+        "addNew": "Добавить новое",
+        "createListing": "Создать объявление",
+        "goToMyListings": "Перейти в Мои объявления",
+        "publish": "Опубликовать",
+        "cleanDraft": "Очистить черновик",
+        "delete": "Удалить объявление",
+        "saveTranslation": "Сохранить",
+        "favorite": {
+            "add": "Добавить в избранное",
+            "remove": "Убрать из избранного"
+        },
+        "contactToAuthor": "Написать сообщение",
+        "edit": "Редактировать объявление",
+        "manage": "Управлять",
+        "save": "Сохранить"
+    },
+
+    "event": {
+        "participation": {
+            "join": "Участвовать",
+            "leave": "Вы уже участник"
+        }
+    },
+
+    "review": {
+        "create": "Оставить отзыв"
+    },
+
+    "messenger": {
+        "profile": "Профиль",
+        "listing": "Объявление"
+    },
+
+    "security": {
+        "deleteAccount": "Удалить аккаунт"
+    },
+
+    "forum": {
+        "readTopic": "Читать",
+        "createTopic": "Создать тему",
+        "expand": "Развернуть полностью…",
+        "collapse": "Свернуть"
+    }
+}

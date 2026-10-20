@@ -1,0 +1,101 @@
+.hover-animation-card {
+    cursor: pointer;
+
+    &:hover {
+        /* transform: translateY(-5px); */
+        transition: transform 0.5s;
+        box-shadow: 0 5px 15px var(--shadow-color);
+    }
+}
+
+.appearance-top-animation {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-60px);
+    transition: all 0.3s ease;
+}
+
+.appearance-bottom-animation {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.3s ease;
+}
+.appearance-left-animation {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.2s ease;
+}
+.appearance-right-animation {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.2s ease;
+}
+
+.appearance-top-animation.visible,
+.appearance-left-animation.visible,
+.appearance-right-animation.visible,
+.appearance-bottom-animation.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transform: translateX(0);
+}
+
+.fade-down {
+    animation: fadeDown 0.4s ease forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+@keyframes expandDown {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1); /* <-- число, не % */
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}

@@ -1,0 +1,43 @@
+@use "@core/css/components/global-mixins" as *;
+
+.tasksModal {
+    max-width: 500px;
+    width: auto;
+    border-radius: 1.5rem;
+    border: none;
+}
+
+.details {
+    background-color: var(--background-l1);
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+
+    @include flex-column;
+    gap: 0.5rem;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0); /* <- нормальное положение */
+    }
+}
+
+.detail {
+    @include flex-column;
+    text-align: left;
+
+    .title {
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+}

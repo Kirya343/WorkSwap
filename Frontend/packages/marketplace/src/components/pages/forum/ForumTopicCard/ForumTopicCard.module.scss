@@ -1,0 +1,114 @@
+@use "@core/css/components/global-mixins" as *;
+
+.card {
+    position: relative;
+    @include card;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--background-l2);
+    @include flex-column;
+    gap: .5rem;
+    justify-content: space-between;
+
+    transition: background-color 0.2s ease-in-out;
+
+    @include mobile {
+        @include flex-column;
+        font-size: 0.9rem;
+        gap: 4px;
+        padding: .5rem;
+    }
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.readBtn {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    height: fit-content;
+    border-radius: var(--radius);
+    background-color: #2eac399c;
+    font-weight: 600;
+    cursor: pointer;
+
+    i {
+        margin-left: 3px;
+    }
+
+    &:hover {
+        background-color: #3bc7479c;
+    }
+
+    @include mobile {
+        width: fit-content;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.collapseTheme {
+    position: absolute;
+    bottom: 2px;
+    white-space: nowrap;
+    font-weight: 700;
+    color: var(--primary);
+    cursor: pointer;
+    right: 150px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include mobile {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 1rem;
+        position: static;
+    }
+}
+
+.meta {
+    @include flex-column;
+    gap: 0.3rem;
+    overflow: hidden;
+
+    .topicTheme {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.open {
+            white-space: normal;
+        }
+    }
+}
+
+.forumTag {
+    white-space: nowrap;
+    border-radius: 3rem;
+    padding: 0.1rem 0.7rem;
+    font-size: 0.9rem;
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+
+    border: 1px solid var(--border-color);
+
+    &.selected {
+        background-color: #2e4bac5b;
+        border: 1px solid var(--primary);
+    }
+}

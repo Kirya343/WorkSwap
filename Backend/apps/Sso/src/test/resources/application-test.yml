@@ -1,0 +1,34 @@
+spring:
+  central-datasource:
+    jdbc-url: jdbc:h2:mem:workswap-test-main
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  statistics-datasource:
+    jdbc-url: jdbc:h2:mem:workswap-test-stat
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties: 
+      hibernate: 
+        dialect: org.hibernate.dialect.H2Dialect
+  config:
+    import:
+      - classpath:config/oauth.yml
+      - classpath:config/database.yml
+      - classpath:config/main.yml
+      - classpath:config/logging.yml
+      - classpath:config/cors.yml
+      - classpath:config/rabbitmq.yml
+
+  autoconfigure:
+        exclude:
+            - org.springframework.boot.security.oauth2.client.autoconfigure.OAuth2ClientAutoConfiguration
+
+jwt:
+  public-key-location: classpath:ssl/jwt-public.pem
+  private-key-location: classpath:ssl/jwt-private.pem

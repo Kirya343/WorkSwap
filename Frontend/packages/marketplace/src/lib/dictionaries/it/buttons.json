@@ -1,0 +1,73 @@
+{
+    "common": {
+        "save": "Salva",
+        "cancel": "Annulla",
+        "delete": "Elimina",
+        "edit": "Modifica"
+    },
+
+    "login": "Accedi",
+    "loginToWrite": "Accedi per scrivere",
+    "loginGoogle": "Accedi con Google",
+    "registerButton": "Completa la registrazione",
+    "returnToCatalog": "Torna al catalogo",
+    "createAccount": "Crea un account",
+
+    "menu": {
+        "notifications": "Notifiche",
+        "helpBeBetter": "Aiutaci a migliorare il sito",
+        "contactToSupport": "Contatta lo sviluppatore"
+    },
+    
+    "upload": {
+        "image": "Carica immagine"
+    },
+
+    "special": {
+        "connectTelegram": "Collega Telegram"
+    },
+
+    "listing": {
+        "addNew": "Aggiungi nuovo",
+        "createListing": "Crea annuncio",
+        "goToMyListings": "Vai ai miei annunci",
+        "publish": "Pubblica",
+        "cleanDraft": "Cancella bozza",
+        "delete": "Elimina annuncio",
+        "saveTranslation": "Salva",
+        "favorite": {
+            "add": "Aggiungi ai preferiti",
+            "remove": "Rimuovi dai preferiti"
+        },
+        "contactToAuthor": "Invia un messaggio",
+        "edit": "Modifica annuncio",
+        "manage": "Gestisci"
+    },
+
+    "event": {
+        "participation": {
+            "join": "Partecipa",
+            "leave": "Sei già un partecipante"
+        }
+    },
+
+    "review": {
+        "create": "Lascia una recensione"
+    },
+
+    "messenger": {
+        "profile": "Profilo",
+        "listing": "Annuncio"
+    },
+
+    "security": {
+        "deleteAccount": "Elimina account"
+    },
+
+    "forum": {
+        "readTopic": "Leggi",
+        "createTopic": "Crea discussione",
+        "expand": "Espandi completamente…",
+        "collapse": "Riduci"
+    }
+}

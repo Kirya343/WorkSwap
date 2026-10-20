@@ -1,0 +1,55 @@
+{
+    "confirms": {
+        "deleteAccount": "Sei sicuro di voler eliminare l'account? Questa azione è irreversibile.",
+        "deleteListing": "Sei sicuro di voler eliminare l'annuncio? Questa azione è irreversibile."
+    },
+
+    "notification": {
+        "success": {
+            "listingDelete": "Annuncio eliminato",
+            "publish": "Annuncio pubblicato",
+            "createDraft": "Bozza dell'annuncio salvata",
+            "listingUpdate": "Annuncio aggiornato",
+            "reviewCreate": "Recensione salvata con successo",
+            "copyListingLink": "Link dell'annuncio copiato",
+            "copyEmail": "Email copiata",
+            "copyPhone": "Numero di telefono copiato",
+            "copyTelegramTag": "Tag copiato"
+        },
+        "error": {
+            "listingDelete": "Errore durante l'eliminazione dell'annuncio",
+            "listingUpdate": "Errore durante l'aggiornamento dell'annuncio",
+            "reviewCreate": "Impossibile lasciare una recensione",
+            "toggleFavorite": "Errore durante la modifica dei preferiti"
+        },
+
+        "misc": {
+            "hadDraft": "Hai una bozza salvata",
+            "nullReviewText": "Inserisci il testo della recensione",
+            "nullReviewRating": "Assegna una valutazione all'annuncio",
+            "error": {
+                "draftsLoading": "Errore durante il caricamento delle bozze",
+                "listingCreate": "Errore durante la creazione dell'annuncio"
+            }
+        }
+    },
+
+    "login": {
+        "email_required": "Inserisci l'email",
+        "email_invalid": "Formato email non valido",
+        "password_required": "Inserisci la password",
+        "password_short": "La password deve contenere almeno 8 caratteri",
+        "password_mismatch": "Le password non coincidono",
+        "name_required": "Inserisci il nome",
+        "name_invalid": "Il nome contiene caratteri non validi",
+        "login_error": "Errore durante l'accesso all'account",
+        "login_success": "Accesso effettuato con successo",
+        "account_not_exists": "Questo account non esiste",
+        "account_no_password_login": "Non è possibile accedere a questo account tramite password",
+        "password_incorrect": "Password errata",
+        "email_exists": "Questa email è già registrata",
+        "register_success": "Registrazione effettuata con successo",
+        "user_not_found": "Utente non trovato",
+        "register_error": "Errore durante la registrazione dell'utente"
+    }
+}

@@ -1,0 +1,12 @@
+spring:
+  central-datasource:
+    jdbc-url: jdbc:mariadb://127.0.0.1:3306/database_main?useSSL=false&serverTimezone=UTC # s4_WorkSwap_Center_Test тест
+    username: user_main
+    password: password_main
+    driver-class-name: org.mariadb.jdbc.Driver
+    
+  statistics-datasource:
+    jdbc-url: jdbc:mariadb://127.0.0.1:3306/database_statistic?useSSL=false&serverTimezone=UTC # s4_WorkSwap_Center_Test тест
+    username: user_statistic
+    password: password_statistic
+    driver-class-name: org.mariadb.jdbc.Driver

@@ -1,0 +1,88 @@
+@use "@core/css/components/global-mixins" as *;
+
+.wrapper {
+	width: 100%;
+	overflow: auto;
+	min-height: 0;
+}
+
+.layout {
+	display: flex;
+	height: max-content();
+	gap: 1rem;
+	max-width: calc(1300px + 3rem);
+	width: 100%;
+	padding-left: 1.5rem;
+	margin: 0 auto;
+	overflow: visible;
+
+	@include mobile {
+        padding: 0;
+    }
+}
+
+.main {
+	padding: 0 1rem;
+    padding-top: 1rem;
+    flex: 1;
+    min-width: 0;
+    height: fit-content;
+    overflow-y: auto;
+    scrollbar-width: none;
+	overflow: visible;
+
+    @include mobile {
+        padding: 0;
+    }
+
+    @include laptop-lg {
+        min-width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+.typesList {
+	display: inline-flex;
+	overflow-x: auto;
+	justify-content: space-around;
+	gap: 0.4rem;
+	width: max-content;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	padding: 0.3rem 0.2rem;
+	margin-bottom: 1rem;
+	background-color: var(--background-l2);
+	border-radius: 1rem;
+	scrollbar-color: var(--border-color) #00000000;
+	scrollbar-gutter: auto;
+	scrollbar-width: thin;
+
+	@include mobile {
+		justify-content: space-between;
+	}
+
+	.type {
+		display: inline-flex;
+		flex-wrap: nowrap;
+		flex: 0 0 auto;
+		width: fit-content;
+		justify-content: center;
+		border-width: 0;
+		cursor: pointer;
+		padding: 0.2rem 1cqh;
+		color: var(--text-color);
+		gap: 0.4rem;
+		font-size: 1.05rem;
+		font-weight: 600;
+		transition: all 0.1s ease-in;
+		border-radius: 2rem;
+
+		&.active, &:hover {
+			color: var(--primary);
+		}
+
+		&.active {
+			background-color: rgba(138, 138, 138, 0.233);
+		}
+	}
+}

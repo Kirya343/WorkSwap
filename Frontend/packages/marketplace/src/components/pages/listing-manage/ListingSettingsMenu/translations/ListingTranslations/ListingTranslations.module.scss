@@ -1,0 +1,60 @@
+@use "@core/css/components/global-mixins" as *;
+
+.translationEditor {
+    @include flex-column;
+    gap: 0.5rem;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.langCards {
+    display: flex;
+    gap: 0.5rem;
+    width: fit-content;
+    overflow-x: auto;
+    min-width: 0;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.lang {
+    border: 3px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 0.5rem 2rem;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+
+    &.active {
+        border-radius: var(--radius) var(--radius) 0 0;
+        border-bottom: 3px solid transparent;
+
+        @include mobile {
+            border: 3px solid var(--border-color);
+            border-radius: var(--radius);
+            background-color: #6a8fc748;
+        }
+    }
+}
+
+.languageSelector {
+    display: flex;
+    gap: 1rem;
+    
+    button {
+        padding: 0.5rem 1rem;
+        font-size: medium;
+        border: 1px solid var(--primary-light);
+        border-radius: var(--radius);
+        cursor: pointer;
+        transition: background 0.3s ease-in;
+
+        &:hover {
+            background-color: var(--primary-light);
+        }
+    }
+}

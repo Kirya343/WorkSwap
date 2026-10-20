@@ -1,0 +1,94 @@
+@use "@core/css/components/global-mixins" as *;
+
+$big-radius: 16px;
+$small-radius: 6px;
+$min-radius: 1px;
+
+.messagesGroup {
+    max-width: 70%;
+    display: flex;
+    gap: 0.5rem;
+
+    .messages {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        .authorName {
+            display: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+    }
+
+    &.in {
+        flex-direction: row;
+        margin-right: auto;
+
+        .message {
+            background-color: var(--message-in);
+            border-radius: $small-radius $big-radius $big-radius $small-radius;
+
+            &:first-child {
+                border-radius: $big-radius $big-radius $big-radius $small-radius;
+
+                .authorName {
+                    display: block;
+                }
+            }
+
+            &:last-child {
+                border-radius: $small-radius $big-radius $big-radius $min-radius;
+            }
+        }
+    }
+
+    &.out {
+        flex-direction: row-reverse;
+        margin-left: auto;
+
+        .message {
+            margin-left: auto;
+            background-color: var(--message-out);
+            border-radius: $big-radius $small-radius $small-radius $big-radius;
+
+            &:first-child {
+                border-radius: $big-radius $big-radius $small-radius $big-radius;
+            }
+            
+            &:last-child {
+                border-radius: $big-radius $small-radius $min-radius $big-radius;
+            }
+        }
+    }
+
+    .avatar {
+        margin-top: auto;
+    }
+
+    .message {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding: 0.3rem 0.75rem;
+        
+        .content {
+            position: relative;
+            display: inline-flex;
+            align-items: flex-end;
+            gap: 0.4rem;
+
+            .messageText {
+                margin: 0;
+                word-wrap: break-word;
+            }
+
+            .messageTime {
+                font-size: 0.7rem;
+                color: var(--text-color-l1);
+                white-space: nowrap;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+s3:
+  endpoint: ""
+  bucket: ""
+  access-key: ""
+  secret-key: ""

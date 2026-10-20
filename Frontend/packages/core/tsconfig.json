@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES2024",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "paths": {
+            "@core/*": ["src/*"]
+        },
+
+        "strict": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src", "global.d.ts", "src/AppProviders.tsx"],
+    "exclude": ["node_modules", "dist"]
+}

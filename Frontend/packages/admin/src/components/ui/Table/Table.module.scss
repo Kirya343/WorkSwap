@@ -1,0 +1,106 @@
+@use "@core/css/components/global-mixins" as *;
+
+.wrapper {
+    border-radius: var(--radius);
+    border: 2px solid var(--border-color);
+    height: fit-content;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--background-l1);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: relative;
+
+    thead {
+        position: sticky;
+        top: 0;
+        
+        tr {
+            border-radius: var(--radius);
+
+            .tableHeadItem {
+                background-color: var(--primary);
+                color: var(--permanent-light);
+                padding: 0.8rem 1rem;
+                text-align: left;
+                transition: background-color 0.3s ease;
+
+                @include mobile {
+                    padding: 0.3rem 0.5rem;
+                }
+
+                &.sortable {
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background-color: var(--primary-l1);
+                    }
+                }
+            }
+        }
+    }
+    tr {
+
+        td {
+            flex: 1;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+
+            @include mobile {
+                padding: 0.5rem;
+            }
+
+            &.overlay-td {
+                padding: 0;
+                max-width: 0px;
+            }
+        }
+
+        &:last-child td {
+            border-bottom: none;
+        }
+        
+        &:hover {
+            background-color: var(--hover-overlay);
+        }
+
+        &.draggable {
+            cursor: move;
+        }
+
+        &.drag-over {
+            background-color: #eef;
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+/* &#categoriesTable {
+    max-height: 500px;
+    overflow: auto;
+    width: 100%;
+}
+
+&#tasksTable {
+    max-height: 500px;
+    overflow: auto;
+    width: 100%;
+
+    .admin-table td {
+        padding: 0.5rem;
+        max-width: 240px;
+        white-space: nowrap;    
+        overflow: hidden;        
+        text-overflow: ellipsis;
+        text-align: left;
+    }
+} */

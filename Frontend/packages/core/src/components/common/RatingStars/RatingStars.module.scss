@@ -1,0 +1,20 @@
+.rating {
+    display: flex;
+    gap: 2px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.star {
+    font-size: 1.3rem;
+    color: #ccc; /* Цвет для невыбранных звезд */
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.star.selected {
+    color: var(--rating-star); /* Цвет для выбранных звезд */
+}
+.star.hovered {
+    color: var(--hovered-rating-star);
+}

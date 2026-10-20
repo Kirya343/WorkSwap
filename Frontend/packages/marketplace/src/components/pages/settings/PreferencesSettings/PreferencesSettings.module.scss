@@ -1,0 +1,12 @@
+.langSelectBtn {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--background);
+
+    &.active {
+        border-color: var(--primary);
+    }
+}

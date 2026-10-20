@@ -1,0 +1,71 @@
+{
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit"
+    },
+
+    "login": "Log in",
+    "loginToWrite": "Log in to write",
+    "loginGoogle": "Login with Google",
+    "registerButton": "Complete Registration",
+    "returnToCatalog": "Return to catalog",
+    "createAccount": "Create account",
+
+    "menu": {
+        "notifications": "Notifications",
+        "helpBeBetter": "Help make the site better",
+        "contactToSupport": "Contact the developer"
+    },
+
+    "upload": {
+        "image": "Upload image"
+    },
+    "special": {
+        "connectTelegram": "Connect Telegram"
+    },
+    "listing": {
+        "addNew": "Add new",
+        "createListing": "Create Listing",
+        "goToMyListings": "Go to My Listings",
+        "publish": "Publish",
+        "cleanDraft": "Clear draft",
+        "delete": "Delete listing",
+        "saveTranslation": "Save",
+        "favorite": {
+            "add": "Add to favorites",
+            "remove": "Remove from favorites"
+        },
+        "contactToAuthor": "Send message",
+        "edit": "Edit listing",
+        "manage": "Manage",
+        "save": "Save"
+    },
+
+    "event": {
+        "participation": {
+            "join": "Join",
+            "leave": "You are already a participant"
+        }
+    },
+    "review": {
+        "create": "Leave a review"
+    },
+
+    "messenger": {
+        "profile": "Profile",
+        "listing": "Listing"
+    },
+
+    "security": {
+        "deleteAccount": "Delete account"
+    },
+
+    "forum": {
+        "readTopic": "Read",
+        "createTopic": "Create topic",
+        "expand": "Show more…",
+        "collapse": "Show less"
+    }
+}

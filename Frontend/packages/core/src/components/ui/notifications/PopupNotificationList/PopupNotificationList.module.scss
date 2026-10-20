@@ -1,0 +1,30 @@
+@use "@core/css/components/global-mixins" as *;
+
+.conteiner {
+    position: fixed;
+    top: calc(var(--header-height) + 20px);
+    z-index: 201;
+    width: 100%;
+    @include flex-column;
+    gap: 0.5rem;
+}
+
+.enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.enterActive {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.exitActive {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms;
+}

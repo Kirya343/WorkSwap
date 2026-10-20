@@ -1,0 +1,37 @@
+@use "@core/css/components/global-mixins" as *;
+
+.card {
+    @include flex-column;
+
+    border: 3px solid var(--border-color);
+    border-radius: var(--radius);
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    overflow: hidden;
+
+    transition: all 0.2s ease;
+
+    &.new {
+        align-items: center;
+        justify-content: center;
+        border: 4px dashed var(--border-color);
+        height: 100%;
+    }
+
+    &:hover {
+        border-color: var(--primary);
+        cursor: pointer;
+    }
+
+    img {
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        border-bottom: 3px solid var(--border-color);
+    }
+}
+
+.body {
+    padding: 0.5rem;
+}

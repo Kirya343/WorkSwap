@@ -1,0 +1,34 @@
+server:
+  port: 8085
+  tomcat:
+    max-http-form-post-data-size: 100MB # Default, but good to know
+    max-swallow-size: -1 # Allows unlimited size for multipart requests, if needed
+    max-part-count: 1000
+    max-http-form-post-size: 20971520  # 20MB
+
+spring:
+  profiles:
+    active: 
+      - "statistic"
+      - ${SPRING_PROFILES_ACTIVE:dev}
+
+  web:
+    resources:
+      static-locations: classpath:/static/,classpath:/images/
+      
+  mvc:
+    static-path-pattern: /**
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate: 
+        format_sql: false
+      connection:
+        isolationLevel: 2
+    show-sql: false
+
+  lifecycle:
+    timeout-per-shutdown-phase: "20s"

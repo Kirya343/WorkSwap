@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Server",
+            "type": "shell",
+            "command": "java -jar apps/Server/target/server-1.0.jar",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run Statistic",
+            "type": "shell",
+            "command": "java -jar apps/Statistic/target/statistic-1.0.jar",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run Sso",
+            "type": "shell",
+            "command": "java -jar apps/Sso/target/sso-1.0.jar",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run applications",
+            "dependsOn": [
+                "Run Server",
+                "Run Statistic",
+                "Run Sso"
+            ],
+            "dependsOrder": "parallel"
+        }
+    ]
+}

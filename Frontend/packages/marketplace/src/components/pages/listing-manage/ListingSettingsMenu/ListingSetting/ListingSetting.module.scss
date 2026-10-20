@@ -1,0 +1,15 @@
+.setting {
+    margin-bottom: 1rem;
+}
+    
+.header {
+    margin-bottom: 1rem;
+}
+
+.body {
+    display: grid;
+    transition: grid-template-rows 0.3s ease;
+
+    overflow: hidden;
+    background-color: var(--background-l1);
+}

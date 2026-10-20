@@ -1,0 +1,23 @@
+@use "@core/css/components/global-mixins" as *;
+
+.layout {
+    flex: 1;
+    display: flex;
+
+    .dialogs {
+        flex: 0 0 250px;
+
+        @include mobile {
+            flex: 1;
+        }
+    }
+
+    .chatWindow {
+
+        @include mobile {
+            top: 0;
+            /* padding: 0; */
+            width: calc(100vw - 0.5rem);
+        }
+    }
+}

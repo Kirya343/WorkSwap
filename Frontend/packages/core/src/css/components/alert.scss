@@ -1,0 +1,29 @@
+.alert {
+    animation: fadeIn 0.3s ease-in-out;
+
+    &-success {
+        border-radius: var(--radius);
+        border: 1px solid #58eb58;
+        background-color: rgba(145, 223, 125, 0.192);
+        padding: 0.5rem;
+    }
+
+    &-info {
+        border-radius: var(--radius);
+        border: 1px solid #58a4eb;
+        background-color: rgba(125, 176, 223, 0.192);
+        padding: 0.5rem;
+    }
+
+    &-danger {
+        border-radius: var(--radius);
+        border: 1px solid #dc3545;
+        background-color: rgba(223, 125, 125, 0.192);
+        padding: 0.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

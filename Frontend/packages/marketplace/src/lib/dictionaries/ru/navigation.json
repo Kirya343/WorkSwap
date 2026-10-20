@@ -1,0 +1,32 @@
+{
+    "back": "Назад",
+    
+    "catalog": "Каталог",
+    "forum": "Форум",
+    "admin": "Админка",
+
+    "catalogSidebar": {
+        "links": {
+            "about": "Что это за сайт?",
+            "account": "Аккаунт",
+            "createListing": "Создать новое объявление",
+            "myListings": "Мои объявления",
+            "myReviews": "Мои отзывы",
+            "messenger": "Мои сообщения"
+        }
+    },
+    "accountSidebar": {
+        "login": "Войти в аккаунт",
+        "logout": "Выйти из аккаунта",
+        "links": {
+            "account": "Аккаунт",
+            "my-listings": "Мои объявления",
+            "favorites": "Избранное",
+            "messenger": "Сообщения",
+            "reviews": "Отзывы",
+            "settings": "Настройки",
+            "security": "Безопасность",
+            "editProfile": "Редактировать профиль"
+        }
+    }
+}

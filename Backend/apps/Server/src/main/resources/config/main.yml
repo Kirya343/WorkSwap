@@ -1,0 +1,30 @@
+api:
+  url: http://localhost:8083
+
+frontend:
+  url: http://localhost:30000
+
+cloud:
+  url: https://cloud.workswap.org
+
+app:
+  cookie:
+    secure: false
+    domain: "localhost"
+    sameSite: "Strict"
+
+tgbot:
+  url: http://localhost:30003
+
+isTest: true
+
+salavion: 
+  url: http://localhost:8001
+
+mailjet:
+  api-key: 1234321
+  secret-key: 123454321
+  sender: kirya343@gmail.com
+
+deepl:
+  api-key: 123123

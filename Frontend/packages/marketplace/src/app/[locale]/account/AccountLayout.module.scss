@@ -1,0 +1,70 @@
+@use "@core/css/components/global-mixins" as *;
+
+
+.accountLayout {
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    max-width: calc(1200px + 2rem);
+    padding: 2rem 1rem 1rem 1rem;
+    height: calc(var(--visual-viewport-height, 100dvh) - var(--header-height));
+    overflow-y: auto;
+    overflow-x: visible;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include tablet {
+        flex-direction: column;
+        padding: 0 0.3rem;
+    }
+
+    @include mobile {
+        padding: 0;
+    }
+}
+
+.accountMain {
+    @include flex-column;
+    flex: 1;
+    transition: max-height 0.2s ease;
+    max-height: calc(var(--visual-viewport-height, 100dvh) - var(--header-height));
+    overflow: visible;
+    max-width: 100%;
+}
+
+.card {
+    flex: 1;
+    @include flex-column;
+    background: var(--background-l1);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    padding: 1.5rem;
+    height: fit-content;
+    max-width: 100%;
+    overflow: visible;
+
+    &.noShrink {
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    @include mobile {
+        padding: 0.5rem;
+        overflow-x: hidden;
+        box-shadow: 0;
+        border-radius: 0;
+        max-height: calc(var(--visual-viewport-height, 100dvh) - var(--header-height));
+    }
+}
+
+.backBtn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

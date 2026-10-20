@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход в аккаунт</title>
+    <link rel="stylesheet" href="/css/auth-page.css" />
+  </head>
+  <body>
+    <div class="fullscreen-container">
+      <div class="half-screen-container">
+        <img
+          class="workswap-icon-main"
+          src="/assets/images/workswap-icon.png"
+        />
+        <div class="half-container-text-pictures">
+          <div class="text-workswap-header">
+            Добро пожаловать в Salavion Auth!
+          </div>
+          <div class="text-workswap-description">
+            Зарегистрируйтесь или войдите в аккаунт, и мы вернем вас обратно.
+          </div>
+          <div class="social-media-pictures">
+            <img
+              class="social-media-picture"
+              src="/assets/images/ws-inst.png"
+            />
+            <img class="social-media-picture" src="/assets/images/ws-fb.png" />
+            <img class="social-media-picture" src="/assets/images/ws-tg.png" />
+          </div>
+        </div>
+
+        <form
+          class="card-registration-container active"
+          id="main-container"
+          novalidate
+        >
+          <div
+            class="header-arc arc-title"
+            id="switch-to-reg"
+            style="color: white; cursor: pointer"
+          >
+            Регистрация
+          </div>
+
+          <div class="registration-content-area active" id="reg-content">
+            <span id="register-message" class="auth-message"></span>
+            <input type="text" name="reg_name" placeholder="Имя" required />
+            <input
+              type="email"
+              name="reg_email"
+              placeholder="Введите email"
+              required
+            />
+            <div class="input-group">
+              <input
+                type="password"
+                name="reg_password"
+                placeholder="Пароль"
+                minlength="8"
+                required
+              />
+              <span class="error-message"
+                >Пароль должен содержать 8 и более символов</span
+              >
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                name="reg_password_confirm"
+                placeholder="Подтвердите пароль"
+                required
+              />
+            </div>
+            <div class="checkbox-terms-of-use-and-privacy-policy">
+              <input
+                type="checkbox"
+                class="checkbox-terms"
+                name="checked"
+                required
+                id="reg-check"
+              />
+              <label for="reg-check" class="terms-label-white">
+                Я принимаю <a href="#">Условия пользования</a> и
+                <a href="#">Политику конфиденциальности</a>
+              </label>
+            </div>
+            <button class="btn-registration-white" type="submit">
+              Завершить регистрацию
+            </button>
+          </div>
+
+          <div class="bottom-arc-login active" id="login-arc">
+            <div class="card login-container">
+              <div class="form-content active" id="login-content">
+                <div
+                  class="arc-title login-title"
+                  id="switch-to-login"
+                  style="cursor: pointer"
+                >
+                  Вход в аккаунт
+                </div>
+                <span id="login-message" class="auth-message"></span>
+                <input
+                  type="email"
+                  name="log_email"
+                  placeholder="Введите email"
+                />
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="log_password"
+                    placeholder="Пароль"
+                    minlength="8"
+                  />
+                  <span class="error-message"
+                    >Пароль должен содержать 8 и более символов</span
+                  >
+                </div>
+                <a href="#" class="forgot-password">Вспомнить пароль</a>
+                <button class="btn-primary" type="submit">Войти</button>
+                <button id="login-google" class="btn-google" type="button">
+                  <img src="/assets/images/google.png" alt="Google" />
+                  <span>Войти через Google</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="verify-overlay" id="verify-modal">
+      <div class="verify-card">
+        <div class="verify-close" id="verify-close">
+          <i class="fa-light fa-xmark"></i>
+        </div>
+        <div class="verify-header">Верификация Email</div>
+        <div id="verify-message" class="verify-alert"></div>
+        <input
+          type="text"
+          id="verify-code"
+          class="verify-input"
+          placeholder="Введите код"
+          maxlength="6"
+        />
+        <div id="verify-info" class="verify-info"></div>
+        <button id="btn-verify" class="btn-primary" disabled>
+          Подтвердить
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const $ = (s) => document.querySelector(s);
+
+      const mainForm = $("#main-container");
+      const loginGoogleBtn = $("#login-google");
+      const verifyModal = $("#verify-modal");
+      const verifyInput = $("#verify-code");
+      const verifyInfo = $("#verify-info");
+      const verifyMessage = $("#verify-message");
+      const btnVerify = $("#btn-verify");
+      const closeBtn = $("#verify-close");
+      const switchLogin = $("#switch-to-login");
+      const switchReg = $("#switch-to-reg");
+
+      const formEls = {
+        reg: {
+          name: document.getElementsByName("reg_name")[0],
+          email: document.getElementsByName("reg_email")[0],
+          pass: document.getElementsByName("reg_password")[0],
+          pass2: document.getElementsByName("reg_password_confirm")[0],
+          check: $("#reg-check"),
+        },
+        log: {
+          email: document.getElementsByName("log_email")[0],
+          pass: document.getElementsByName("log_password")[0],
+        },
+      };
+
+      let currentMode = "login";
+      let currentEmail = "";
+
+      const toggleMode = (mode) => {
+        currentMode = mode;
+        Object.values(formEls.reg).forEach((el) => {
+          if (!el) return;
+          mode === "register"
+            ? el.setAttribute("required", "required")
+            : el.removeAttribute("required");
+        });
+        $("#main-container").classList.toggle("active", mode === "login");
+        $("#login-arc").classList.toggle("active", mode === "login");
+        $("#login-content").classList.toggle("active", mode === "login");
+        $("#reg-content").classList.toggle("active", mode === "login");
+      };
+
+      switchLogin.onclick = (e) => {
+        e.stopPropagation();
+        toggleMode("login");
+      };
+      switchReg.onclick = () => toggleMode("register");
+
+      loginGoogleBtn.onclick = () => {
+        const redirect =
+          new URLSearchParams(location.search).get("redirect") || "/";
+        console.log(redirect)
+        location.href = `/api/auth/google?redirect=${encodeURIComponent(redirect)}`;
+      };
+
+      const showMessage = (text, ok = true) => {
+        verifyMessage.style.display = "block";
+        verifyMessage.className = `verify-alert ${ok ? "success" : "error"}`;
+        verifyMessage.textContent = text;
+        verifyMessage.classList.add("fade-in");
+      };
+
+      const shake = (el) => {
+        el.classList.add("shake");
+        setTimeout(() => el.classList.remove("shake"), 400);
+      };
+
+      const openVerify = (email) => {
+        currentEmail = email;
+        verifyModal.classList.add("active");
+        verifyInfo.innerHTML = `
+          Код отправлен на <b>${email}</b><br>
+          <span style="opacity:.6">Письмо придёт с kkodolov40@gmail.com</span>
+        `;
+      };
+
+      const closeModal = () => {
+        verifyModal.classList.remove("active");
+        verifyInput.value = "";
+        verifyMessage.style.display = "none";
+        btnVerify.disabled = true;
+      };
+
+      verifyModal.onclick = (e) => e.target === verifyModal && closeModal();
+      closeBtn.onclick = closeModal;
+
+      verifyInput.oninput = (e) => {
+        const v = e.target.value.trim();
+        btnVerify.disabled = v.length < 6;
+        btnVerify.classList.toggle("pulse", v.length === 6);
+      };
+
+      btnVerify.onclick = async () => {
+        const code = verifyInput.value.trim();
+        if (code.length < 6) return;
+
+        btnVerify.disabled = true;
+        try {
+          const res = await fetch(`/api/auth/verify?code=${code}`, {
+            method: "POST",
+          });
+          const data = await res.json().catch(() => ({}));
+
+          if (res.ok) {
+            showMessage(data.message || "Успешно!", true);
+            setTimeout(() => location.reload(), 800);
+            if (redirect) {
+              location.href = redirect;
+            }
+          } else {
+            showMessage(data.message || "Неверный код", false);
+            shake(verifyInput);
+            btnVerify.disabled = false;
+          }
+        } catch {
+          showMessage("Ошибка сервера", false);
+          shake(verifyInput);
+          btnVerify.disabled = false;
+        }
+      };
+
+      mainForm.onsubmit = async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const fd = new FormData(mainForm);
+        const redirect =
+          new URLSearchParams(location.search).get("redirect") || "/";
+        const payload =
+          currentMode === "login"
+            ? { email: fd.get("log_email"), password: fd.get("log_password") }
+            : {
+                name: fd.get("reg_name"),
+                email: fd.get("reg_email"),
+                password: fd.get("reg_password"),
+              };
+
+        currentEmail = payload.email;
+
+        try {
+          const res = await fetch(`/api/auth/${currentMode}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const data = await res.json();
+
+          if (res.ok) {
+            Array.from(document.getElementsByClassName("auth-message"))
+              .forEach(msg => msg.textContent = data.message);
+            if (data.instructions?.verifyEmail) {
+              await fetch("/api/auth/send-verify-code", { method: "POST" });
+              openVerify(currentEmail);
+              return;
+            }
+            if (redirect) {
+              location.href = redirect;
+            }
+          } else {
+            alert(data.message || "Ошибка");
+          }
+        } catch (e) {
+          console.error(e)
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+@use "@core/css/components/global-mixins" as *;
+
+.popover {
+    width: 400px;
+
+    background: var(--background-l1);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+    color: var(--text-color);
+
+    z-index: 1000;
+
+    animation: notification-popover-in 0.15s ease-out;
+}
+
+.modal {
+    position: fixed;
+
+    top: var(--header-height);
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - var(--header-height));
+
+    padding: 0;
+
+    background: var(--background-l1);
+    border: none;
+    border-radius: 0;
+
+    color: var(--text-color);
+
+    overflow: hidden;
+
+    z-index: 1000;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    z-index: 999;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    padding: 0.75rem 1rem;
+
+    border-bottom: 1px solid var(--border-color);
+    font-weight: bold;
+}
+
+.title {
+    margin: 0;
+    padding: 0.75rem 1rem;
+
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+
+    top: 0.75rem;
+    right: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    background: var(--background-l2);
+    border: none;
+    border-radius: 0.5rem;
+
+    color: var(--text-color);
+
+    cursor: pointer;
+
+    &:hover {
+        background: var(--background-l3);
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    min-height: 0;
+}
+
+.list {
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+
+    background: var(--background-l1);
+
+    .empty {
+        padding: 1rem;
+
+        text-align: center;
+        color: #999;
+    }
+}
+
+@keyframes notification-popover-in {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

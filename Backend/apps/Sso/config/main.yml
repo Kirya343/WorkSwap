@@ -1,0 +1,18 @@
+app:
+  url: ${AUTH_URL}
+  cookie:
+    secure: true
+    domain: ".workswap.org"
+    sameSite: "None"
+
+frontend:
+  url: ${FRONTEND_URL}
+
+mailjet:
+  api-key: ${MAILJET_API_KEY}
+  secret-key: ${MAILJET_SECRET_KEY}
+  sender: ${MAILJET_SENDER}
+
+jwt:
+  public-key-location: file:${JWT_PUBLIC_KEY_LOCATION:./ssl/jwt-public.pem}
+  private-key-location: file:${JWT_PRIVATE_KEY_LOCATION:./ssl/jwt-private.pem}

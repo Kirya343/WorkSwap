@@ -1,0 +1,31 @@
+{
+    "back": "Indietro",
+    
+    "catalog": "Catalogo",
+    "forum": "Forum",
+    "admin": "Admin",
+
+    "catalogSidebar": {
+        "links": {
+            "about": "Che cos'è questo sito?",
+            "account": "Account",
+            "createListing": "Crea annuncio",
+            "myListings": "I miei annunci",
+            "messenger": "I miei messaggi"
+        }
+    },
+    "accountSidebar": {
+        "login": "Accedi al tuo account",
+        "logout": "Esci dall'account",
+        "links": {
+            "account": "Account",
+            "my-listings": "I miei annunci",
+            "favorites": "Preferiti",
+            "messenger": "Messaggi",
+            "reviews": "Recensioni",
+            "settings": "Impostazioni",
+            "security": "Sicurezza",
+            "editProfile": "Modifica profilo"
+        }
+    }
+}

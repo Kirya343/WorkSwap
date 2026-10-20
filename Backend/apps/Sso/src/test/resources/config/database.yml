@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    jdbc-url: jdbc:mariadb://127.0.0.1:3306/database?useSSL=false&serverTimezone=UTC # s4_WorkSwap_Center_Test тест
+    username: user
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver

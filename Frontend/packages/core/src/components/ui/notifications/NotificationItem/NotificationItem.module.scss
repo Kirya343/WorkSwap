@@ -1,0 +1,37 @@
+@use "@core/css/components/global-mixins" as *;
+
+.notification {
+    padding: 0.75rem 1rem;
+    border-left: 4px solid;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background: var(--background-l2);
+    transition: background 0.2s;
+
+    &.info { border-left-color: #2196f3; }
+    &.warning { border-left-color: #ff9800; }
+    &.error { border-left-color: #f3473b; }
+
+    &.unread {
+        background: rgba(97, 90, 199, 0.15);
+    }
+
+    &:hover {
+        background: rgba(97, 90, 199, 0.25);
+    }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .content {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+    }
+}

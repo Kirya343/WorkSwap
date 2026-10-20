@@ -1,0 +1,33 @@
+@use "@core/css/components/global-mixins" as *;
+
+.container {
+    background: var(--background-l1);
+    border: 1px solid var(--border-color);
+    margin: 0 auto;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    max-width: 460px;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(66, 97, 191, 0.13);
+    @include flex-column;
+    gap: 32px;
+    align-items: center;
+}
+
+.typeSelector {
+    @include flex-column;
+    gap: 20px;
+    margin: 18px 0 32px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .section {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        justify-content: center;
+
+        h2 {
+            grid-column: span 2;
+        }
+    }
+}

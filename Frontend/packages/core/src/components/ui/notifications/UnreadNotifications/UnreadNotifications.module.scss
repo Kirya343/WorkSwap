@@ -1,0 +1,24 @@
+@use "@core/css/components/global-mixins" as *;
+
+.unreadCount {
+    position: absolute;
+    background-color: rgb(197, 38, 38);
+    padding: 2px 6px;
+    border-radius: 0.75em;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    min-width: 1.5em;
+    height: 1.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 2px;
+    right: 2px;
+
+    @include mobile {
+        position: static;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "files": [],
+    "references": [
+        {
+            "path": "./packages/marketplace"
+        },
+        {
+            "path": "./packages/admin"
+        },
+        {
+            "path": "./packages/core"
+        }
+    ]
+}

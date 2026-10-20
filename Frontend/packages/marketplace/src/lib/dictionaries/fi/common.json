@@ -1,0 +1,208 @@
+{
+    "all-listings": "Kaikki ilmoitukset",
+    
+    "placeholders": {
+        "search": "Hae ilmoituksista",
+        "email": "Syötä sähköposti",
+        "category": "Valitse kategoria...",
+        "priceType": "Valitse hintatyyppi...",
+        "location": "Valitse sijainti...",
+        "review": "Kirjoita arvostelu...",
+        "typeMessage": "Kirjoita viesti...",
+        "login": "Sähköposti",
+        "password": "Salasana",
+        "passwordConfirm": "Vahvista salasana",
+        "name": "Nimi",
+        "listing": {
+            "title": "Syötä ilmoituksen nimi...",
+            "description": "Kuvaile ilmoitus..."
+        }
+    },
+    "sorts": {
+        "date": "Päiväys",
+        "price": "Hinta",
+        "rating": "Arvostelu",
+        "views": "Näyttökerrat",
+        "likes": "Tykkäykset"
+    },
+    "priceTypes": {
+        "FIXED": "€",
+        "PER_HOUR": "€ / tunti",
+        "PER_DAY": "€ / päivä",
+        "NEGOTIABLE": "Sop.hinta",
+        "SWAP": "Vaihto",
+        "FREE": "Ilmainen",
+        "WANTED_FREE": "Halutaan ilmaiseksi",
+        "null": ""
+    },
+    "statuses": {
+        "published": "Julkaistu",
+        "active": "Aktiivinen",
+        "blocked": "Estetty",
+        "inactive": "Ei aktiivinen",
+        "draft": "Luonnos"
+    },
+    "languages": {
+        "ru": "Venäjä",
+        "en": "Englanti",
+        "fi": "Suomi",
+        "it": "Italia"
+    },
+    "labels": {
+        "price": "Hinta",
+        "priceType": "Hintatyyppi",
+        "images": "Kuvat",
+        "category": "Kategoria",
+        "location": "Sijainti",
+        "title": "Otsikko",
+        "description": "Kuvaus",
+        "name": "Nimi",
+        "phone": "Puhelin",
+        "views": "Näytöt",
+        "rating": "Arvostelu",
+        "contacts": "Yhteystiedot",
+        "translations": "Julkaisukielet",
+        "status": {
+            "listing": "Ilmoituksen tila",
+            "event": {
+                "title": "Tapahtuman tila",
+                "RECRUITING": "Osallistujien haku käynnissä",
+                "CLOSED": "Haku suljettu",
+                "FINISHED": "Tapahtuma päättynyt",
+                "ARCHIVED": "Arkistoitu"
+            }
+        },
+
+        "event": {
+            "participants": "Osallistujat",
+            "price": "Osallistumismaksu",
+            "date": "Tapahtumapäivä",
+            "registerClosingDate": "Ilmoittautumisen päättymispäivä",
+            "minMaxParticipants": "Osallistujien minimi/maksimi",
+            "visibility": {
+                "title": "Näkyvyys",
+                "public": "Julkinen",
+                "private": "Vain linkin kautta"
+            },
+            "recurrence": {
+                "title": "Toistuvuus",
+                "repeat": "Toistuva",
+                "single": "Kertaluonteinen"
+            },
+            "recurrenceParam": {
+                "title": "Toistuvuuden tiheys",
+                "NONE": "Ei",
+                "DAILY": "Päivittäin",
+                "WEEKLY": "Viikoittain",
+                "MONTHLY": "Kuukausittain",
+                "YEARLY": "Vuosittain"
+            }
+        },
+
+        "settings": {
+            "main": "Yleiset asetukset",
+            "event": "Tapahtuman asetukset",
+            "product": "Tuotteen asetukset",
+            "service": "Palvelun asetukset"
+        }
+    },
+    "titles": {
+        "account": "Oma tili",
+        "favorites": "Suosikit",
+        "myListings": "Omat ilmoitukset",
+        "myReviews": "Omat arvostelut",
+        "messenger": "Viestit",
+        "settings": "Käyttäjäasetukset",
+        "security": "Turvallisuus",
+        "listingCreate": "Ilmoituksen luominen",
+        "listingManage": "Hallinnoi ilmoitusta",
+        "listingDrafts": "Omat luonnokset"
+    },
+    "fallbacks": {
+        "noTitle": "Ei otsikkoa",
+        "noListings": "Ilmoituksia ei löytynyt",
+        "noMessages": "Ei viestejä",
+        "pageNotFound": "Sivua ei löytynyt"
+    },
+    "catalog": {
+        "sidebar": {
+            "search": "Haku",
+            "sort": "Lajittelu",
+            "filters": "Suodattimet",
+            "hasReviews": "Arvostelujen kanssa",
+            "translationsFilter": "Filter by languages",
+            "usefulLinks": "Hyödyllisiä linkkejä"
+        }
+    },
+    "settings": {
+        "avatarTypes": {
+            "uploaded": "Ladattu",
+            "google": "Google",
+            "default": "Oletus"
+        },
+        "labels": {
+            "baseInfo": "Perustiedot",
+            "privacy": "Tietosuoja",
+            "avatar": "Avatar",
+            "myLanguages": "Puhumani kielet",
+            "myLocation": "Sijaintini",
+            "bio": "Tietoa minusta",
+            "theme": "Teema"
+        },
+        "sections": {
+            "PROFILE": "Profiili",
+            "PRIVACY": "Yksityisyys",
+            "PREFERENCES": "Asetukset"
+        }
+    },
+    "messenger": {
+        "placeholders": {
+            "noDialogs": "Sinulla ei ole vielä viestejä.",
+            "startChats": "Aloita keskustelu vastaamalla ilmoitukseen tai lähettämällä viesti käyttäjälle."
+        }
+    },
+    "listing": {
+        "similarListings": "Samankaltaiset ilmoitukset"
+    },
+    "profile": {
+        "listings": "Käyttäjän ilmoitukset"
+    },
+    "reviews": {
+        "listLabel": "Arvostelut",
+        "item": {
+            "label": "Jätä arvostelu",
+            "rating": "Arvosana",
+            "text": "Arvostelun teksti"
+        }
+    },
+
+    "register": {
+        "label": "Rekisteröidy",
+        "welcomeUser": "Tervetuloa, {{name}}!",
+        "acceptTerms": "Hyväksyn <0>Käyttöehdot</0> ja <1>Tietosuojakäytännön</1>",
+        "acceptStudy": "Ymmärrän, että tämä on opiskeluprojekti eikä sivusto ole kaupallinen palvelu",
+        "afterRegister": "Rekisteröinnin vahvistamisen jälkeen sinut ohjataan katalogiin."
+    },
+    "login": {
+        "label": "Kirjaudu tiliin"
+    },
+
+    "listingCreate": {
+        "selectType": "Minkä ilmoituksen haluat luoda?"
+    },
+    "listingManage": {
+        "sections": {
+            "SETTINGS": "Asetukset",
+            "ANALYTICS": "Analytiikka",
+            "MESSAGES": "Viestit"
+        }
+    },
+    "forum": {
+        "popularTopics": "Suositut aiheet",
+        "lastActivity": "Viimeisin aktiivisuus"
+    },
+    "theme": {
+        "light": "Vaalea",
+        "dark": "Tumma"
+    }
+}

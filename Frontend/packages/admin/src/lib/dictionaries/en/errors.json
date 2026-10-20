@@ -1,0 +1,13 @@
+{
+    "ui": {
+        "pageInDev": "This page is still under development <br/>Please come back later :)"
+    },
+
+    "register": {
+        "invalid_creditails": "Invalid credentials"
+    },
+
+    "messenger": {
+        "connectionLost": "Connection to server lost! Reconnecting"
+    }
+}

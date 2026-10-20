@@ -1,0 +1,54 @@
+{
+    "confirms": {
+        "deleteAccount": "Are you sure you want to delete your account? This action is irreversible.",
+        "deleteListing": "Are you sure you want to delete the listing? This action is irreversible."
+    },
+
+    "notification": {
+        "success": {
+            "listingDelete": "Listing deleted",
+            "publish": "Listing published",
+            "createDraft": "Listing draft saved",
+            "listingUpdate": "Listing updated",
+            "reviewCreate": "Review saved successfully",
+            "copyListingLink": "Listing link copied",
+            "copyEmail": "Email copied",
+            "copyPhone": "Phone number copied",
+            "copyTelegramTag": "Tag copied"
+        },
+        "error": {
+            "listingDelete": "Error deleting listing",
+            "listingUpdate": "Error updating listing",
+            "reviewCreate": "Failed to submit review",
+            "toggleFavorite": "Error while toggling favorite"
+        },
+        "misc": {
+            "hadDraft": "You still have a saved draft",
+            "nullReviewText": "Enter review text",
+            "nullReviewRating": "Give a rating to the listing",
+            "error": {
+                "draftsLoading": "Error loading drafts",
+                "listingCreate": "Error creating listing"
+            }
+        }
+    },
+
+    "login": {
+        "email_required": "Enter email",
+        "email_invalid": "Invalid email format",
+        "password_required": "Enter password",
+        "password_short": "Password must be at least 8 characters",
+        "password_mismatch": "Passwords do not match",
+        "name_required": "Enter name",
+        "name_invalid": "Name contains invalid characters",
+        "login_error": "Login error",
+        "login_success": "You have successfully logged in",
+        "account_not_exists": "This account does not exist",
+        "account_no_password_login": "This account cannot be accessed with a password",
+        "password_incorrect": "Incorrect password",
+        "email_exists": "This email is already registered",
+        "register_success": "You have successfully registered",
+        "user_not_found": "User not found",
+        "register_error": "User registration error"
+    }
+}

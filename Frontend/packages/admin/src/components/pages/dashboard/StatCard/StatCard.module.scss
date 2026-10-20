@@ -1,0 +1,55 @@
+@use "@core/css/components/global-mixins" as *;
+
+.card {
+    background: var(--background-l1);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+
+    @include tablet {
+        padding: 1rem;
+    }
+}
+
+.title {
+    font-size: 0.9rem;
+    color: var(--text-color-l1);
+    margin-bottom: 0.5rem;
+}
+
+.valueContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.value {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.change {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--text-color-l1);
+}
+
+.changeContainer {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+
+    .changePercent {
+        margin-left: 0.3rem;
+    }
+
+    &.positive {
+        color: #10b981;
+    }
+
+    &.negative {
+        color: #ef4444;
+    }
+}

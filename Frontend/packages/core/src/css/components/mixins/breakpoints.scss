@@ -1,0 +1,37 @@
+// ===== Variables =====
+$breakpoint-laptop-lg: 1350px;
+$breakpoint-laptop: 1150px;
+$breakpoint-tablet: 900px;
+$breakpoint-mobile: 600px;
+
+// ===== Mixins =====
+
+@mixin laptop-lg {
+	@media (max-width: #{$breakpoint-laptop-lg}) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (max-width: #{$breakpoint-laptop}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+	@media (max-width: #{$breakpoint-mobile}) {
+		@content;
+	}
+}
+
+@mixin mobile-exclude {
+	@media (min-width: #{$breakpoint-mobile}) {
+		@content;
+	}
+}

@@ -1,0 +1,16 @@
+{
+    "settings": {
+        "privacy": "Näytä yhteystietosi muille käyttäjille",
+        "myLanguages": "Määritä useita kieliä nähdäksesi enemmän sopivia ilmoituksia",
+        "myLocation": "Tämä asetus on vapaaehtoinen, mutta hyödyllinen, jotta et näe ilmoituksia muista maista tai kaupungeista",
+        "bio": "Lyhyt tieto",
+        "phoneVisibility": "Näytä puhelinnumero",
+        "emailVisibility": "Näytä sähköposti",
+        "theme": "Teema"
+    },
+
+    "catalog": {
+        "selectedCategory": "Valittu kategoria",
+        "newListing": "Uusi ilmoitus!"
+    }
+}

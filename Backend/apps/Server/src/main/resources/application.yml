@@ -1,0 +1,50 @@
+server:
+  port: 8083
+  tomcat:
+    max-http-form-post-data-size: 100MB # Default, but good to know
+    max-swallow-size: -1 # Allows unlimited size for multipart requests, if needed
+    max-part-count: 1000
+    max-http-form-post-size: 20971520  # 20MB
+
+spring:
+  profiles:
+    group:
+      dev:
+        - server
+        - api
+      prod:
+        - server
+        - api
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+  web:
+    resources:
+      static-locations: classpath:/static/,classpath:/images/
+
+  mvc:
+    static-path-pattern: /**
+
+  servlet:
+    multipart:
+      enabled: true                # Включить поддержку multipart (по умолчанию true, но лучше указать явно)
+      max-file-size: 20MB          # Максимальный размер одного файла
+      max-request-size: 100MB       # Максимальный общий размер всех файлов в одном запросе
+      file-size-threshold: 2MB      # Порог после которого данные пишутся на диск (0 — сразу на диск)
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate: 
+        format_sql: true
+        use_sql_comments: true
+        #dialect: org.hibernate.dialect.MariaDBDialect
+        session_factory:
+          statement_inspector: org.workswap.core.testers.QueryCounter
+      connection:
+        isolationLevel: 2 # READ_COMMITTED
+    show-sql: false
+
+  lifecycle:
+    timeout-per-shutdown-phase: "20s"

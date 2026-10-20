@@ -1,0 +1,11 @@
+spring:
+  config:
+    import:
+      - classpath:config/database.yml
+      - classpath:config/main.yml
+      - classpath:config/logging.yml
+      - classpath:config/rabbitmq.yml
+      - optional:file:./config/database.yml
+      - optional:file:./config/main.yml
+      - optional:file:./config/logging.yml
+      - optional:file:./config/rabbitmq.yml

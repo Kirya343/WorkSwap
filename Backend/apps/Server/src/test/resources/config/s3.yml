@@ -1,0 +1,9 @@
+s3:
+  endpoint: ""
+  bucket: ""
+  access-key: ""
+  secret-key: ""
+
+storage:
+  s3:
+    enabled: false

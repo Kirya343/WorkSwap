@@ -1,0 +1,32 @@
+{
+    "back": "Back",
+
+    "catalog": "Catalog",
+    "forum": "Forum",
+    "admin": "Admin",
+
+    "catalogSidebar": {
+        "links": {
+            "about": "What is this site?",
+            "account": "Account",
+            "createListing": "Create new listing",
+            "myListings": "My listings",
+            "myReviews": "My reviews",
+            "messenger": "My messages"
+        }
+    },
+    "accountSidebar": {
+        "login": "Log in",
+        "logout": "Log out",
+        "links": {
+            "account": "Account",
+            "my-listings": "My Listings",
+            "favorites": "Favorites",
+            "messenger": "Messages",
+            "reviews": "Reviews",
+            "settings": "Settings",
+            "security": "Security",
+            "editProfile": "Edit Profile"
+        }
+    }
+}

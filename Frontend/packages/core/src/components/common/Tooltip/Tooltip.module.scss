@@ -1,0 +1,40 @@
+@use "@core/css/components/global-mixins" as *;
+
+.wrapper {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.box {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    background: #333;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 4px;
+    white-space: pre-line;
+    width: max-content;
+    animation: fadeIn 0.3s forwards;
+    pointer-events: none;
+    z-index: 100;
+
+    .header {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .content {
+        font-size: 13px;
+    }
+
+    @include mobile {
+        position: fixed;
+        bottom: 0;
+        top: initial;
+        width: 90vw;
+        font-size: 16px;
+    }
+}

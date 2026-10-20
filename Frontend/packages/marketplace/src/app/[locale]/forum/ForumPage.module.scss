@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topicList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}

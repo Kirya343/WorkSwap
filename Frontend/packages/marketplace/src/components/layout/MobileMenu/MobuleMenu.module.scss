@@ -1,0 +1,81 @@
+@use "@core/css/components/global-mixins" as *;
+
+.navbarToggler {
+    display: flex;
+    background: none;
+    border: none;
+    align-items: center;
+    padding-left: 1rem;
+
+    i {
+        font-size: 2rem;
+    }
+}
+
+.mobileMenu {
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    visibility: hidden;
+    background-color: var(--background-l2);
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    z-index: 100;
+
+    @include tablet {
+        height: 100%;
+        align-items: center;
+        @include flex-column;
+        padding: 0.4rem 1rem;
+        gap: 0.5rem;
+        overflow-y: auto;
+    }
+
+    &.show {
+        @include tablet {
+            transform: translateX(0);
+            visibility: visible;
+        }
+    }
+}
+
+.userInfo {
+    height: 152px;
+    align-items: center;
+    @include flex-column;
+    gap: 0.5rem;
+}
+
+.accountManager {
+    display: none;
+
+    @include tablet {
+        display: block;
+        min-width: 100%;
+    }
+}
+
+.navbarBtn {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: left;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border-width: 0;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: var(--radius);
+
+    @include mobile {
+        height: 50px;
+        align-items: center;
+    }
+
+    svg {
+        height: 22px;
+    }
+}

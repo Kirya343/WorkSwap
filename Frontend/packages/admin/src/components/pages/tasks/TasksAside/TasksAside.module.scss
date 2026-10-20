@@ -1,0 +1,21 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    gap: 1rem;
+    flex: 1;
+}
+
+.header {
+    font-size: 17px;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

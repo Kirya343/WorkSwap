@@ -1,0 +1,32 @@
+@use "@core/css/components/global-mixins" as *;
+
+.breadcrumbs {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color-l1);
+    display: flex;
+    flex-direction: row;
+
+    .link {
+        color: var(--primary);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .divider {
+        margin: 0 0.5rem;
+        color: var(--text-color-l1);
+    }
+
+    .crumb:last-child .link {
+        color: var(--text-color-l1);
+        text-decoration: none;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}

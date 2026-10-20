@@ -1,0 +1,18 @@
+spring:
+  central-datasource:
+    jdbc-url: jdbc:h2:mem:workswap-test-main
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  statistics-datasource:
+    jdbc-url: jdbc:h2:mem:workswap-test-stat
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties: 
+      hibernate: 
+        dialect: org.hibernate.dialect.H2Dialect

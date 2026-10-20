@@ -1,0 +1,19 @@
+.section {
+    padding-bottom: 1rem;
+    border-bottom: 3px dashed var(--border-color);
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

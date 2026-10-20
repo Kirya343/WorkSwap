@@ -1,0 +1,12 @@
+@use "@core/css/components/global-mixins" as *;
+
+.list {
+    @include flex-column;
+    overflow: auto;
+    flex: 1;
+    height: 70vh;
+
+    @include mobile {
+        overflow-x: hidden;
+    }
+}

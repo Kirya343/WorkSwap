@@ -1,0 +1,62 @@
+@use "@core/css/components/global-mixins" as *;
+
+.rolesList {
+    @include flex-column;
+    border-right: 2px solid var(--border-color);
+    padding-right: 0.5rem;
+    min-width: 180px;
+    gap: 0.2rem;
+    overflow: auto;
+
+    @include mobile {
+        transform: translateX(-120%);
+        position: absolute;
+        z-index: 100;
+        background-color: var(--background-l1);
+        width: 100%;
+        border-width: 0;
+        transition: all 0.2s ease;
+        padding: 0;
+        height: 100%;
+
+        &.show {
+            transform: translateX(0);
+        }
+    }
+}
+    
+.role {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: 1rem;
+
+    display: inline-flex;
+    white-space: nowrap;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        color: var(--text-color);
+    }
+
+    @include mobile {
+        font-size: 1.1rem;
+        justify-content: center;
+        width: auto;
+    }
+
+    &.active {
+        background-color: var(--hover-overlay);
+        border: 1px solid var(--border-color);
+    }
+
+    &:hover {
+        background-color: var(--hover-overlay);
+    }
+}

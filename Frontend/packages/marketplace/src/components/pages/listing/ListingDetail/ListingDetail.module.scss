@@ -1,0 +1,31 @@
+@use "@core/css/components/global-mixins" as *;
+
+.detail {
+    display: inline-flex;
+    gap: 1rem;
+
+    &:has(.listing) {
+        gap: 0.3rem;
+        @include flex-column;
+    }
+
+    :global(.price) {
+        font-weight: 900;
+        color: var(--primary-dark);
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .label {
+        font-size: 0.85rem;
+        color: var(--text-color-l1);
+        translate: 0 2px;
+    }
+
+    .value {
+        font-weight: 500;
+        color: var(--text-color);
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "settings": {
+        "privacy": "Mostra i tuoi dati di contatto agli altri utenti",
+        "myLanguages": "Indica più lingue per vedere più annunci pertinenti",
+        "myLocation": "Questo parametro è facoltativo, ma utile per evitare di vedere annunci da altri paesi o città",
+        "bio": "Brevi informazioni",
+        "phoneVisibility": "Visibilità del numero di telefono",
+        "emailVisibility": "Visibilità dell'email"
+    },
+
+    "catalog": {
+        "selectedCategory": "Categoria selezionata",
+        "newListing": "Nuovo annuncio!"
+    }
+}

@@ -1,0 +1,22 @@
+@use "@core/css/components/global-mixins" as *;
+
+.card {
+    background: var(--background-l1);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    width: 100%;
+    @include flex-column;
+    gap: 0.5rem;
+
+    @include mobile {
+        &:has(:global(#EVENT_TOPIC)) {
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+}

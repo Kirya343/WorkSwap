@@ -1,0 +1,5 @@
+@use "@core/css/components/global-mixins" as *;
+
+.page {
+    @include flex-column;
+}

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="
+            http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.2.0-M1</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.workswap</groupId>
+    <artifactId>workswap</artifactId>
+    <version>1.0</version>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.release>21</maven.compiler.release>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <modules>
+        <module>domains/category</module>
+        <module>domains/chat</module>
+        <module>domains/forum</module>
+        <module>domains/listing</module>
+        <module>domains/location</module>
+        <module>domains/notification</module>
+        <module>domains/order</module>
+        <module>domains/review</module>
+        <module>domains/statistic</module>
+        <module>domains/subscription</module>
+        <module>domains/task</module>
+        <module>domains/permission</module>
+        <module>domains/user</module>
+
+        <module>infrastructure/storage</module>
+        <module>infrastructure/rabbitmq</module>
+        <module>infrastructure/shared</module>
+        <module>infrastructure/security</module>
+        <module>infrastructure/sso-security-core</module>
+        <module>infrastructure/datasource</module>
+        <module>infrastructure/webflux</module>
+
+        <module>apps/Server</module>
+        <module>apps/Sso</module>
+        <module>apps/Statistic</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- ===================== -->
+            <!-- Internal modules      -->
+            <!-- ===================== -->
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-category-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-chat-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-forum-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-listing-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-location-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-notification-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-order-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-review-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-statistic-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-task-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-shared</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-storage-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-user-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-permission-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-security-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-datasource-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-webflux-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-sso-security-core-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.workswap</groupId>
+                <artifactId>workswap-rabbitmq</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- ===================== -->
+            <!-- Optional overrides    -->
+            <!-- ===================== -->
+
+            <dependency>
+                <groupId>com.aventrix.jnanoid</groupId>
+                <artifactId>jnanoid</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.38</version>
+            </dependency>
+
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>bom</artifactId>
+                <version>2.40.8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

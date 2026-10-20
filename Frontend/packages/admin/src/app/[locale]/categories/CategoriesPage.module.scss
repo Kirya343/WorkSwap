@@ -1,0 +1,36 @@
+@use "@core/css/components/global-mixins" as *;
+
+.page {
+    @include flex-column;
+}
+
+.tables {
+    @include flex-row;
+    gap: 0.5rem;
+}
+
+.listingTypes {
+    display: inline-flex;
+
+    .listingType {
+        padding: 1rem;
+        font-size: 1.1rem;
+        background-color: transparent;
+        color: var(--text-color);
+        border: 2px solid transparent;
+        cursor: pointer;
+        opacity: 1;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+            opacity: 0.6;
+        }
+
+        &.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+    }
+}

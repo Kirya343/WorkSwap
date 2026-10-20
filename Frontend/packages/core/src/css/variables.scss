@@ -1,0 +1,139 @@
+:root {
+
+    /* ===== Backgrounds ===== */
+    --background:        #f5f6f8;
+    --background-l1:     #ffffff;
+    --background-l2:     #f1f3f7;
+    --background-l3:     #e4e7ef;
+
+    /* ===== Text ===== */
+    --text-color:        #20242c;
+    --text-color-l1:     #6b7280;
+    --inverse-text-color:#ffffff;
+
+    /* ===== Borders & Shadow ===== */
+    --border-color:      #e2e5ea;
+    --border-color-l2:   #d2d6de;
+    --shadow-color:      rgba(15, 23, 42, 0.08);
+    --shadow-color-2:    rgba(0, 0, 0, 0.274);
+
+    /* ===== Primary ===== */
+    --primary-2xlight:   #f0f1ff;
+    --primary-light:     #c9ccf7;
+    --primary:           #5f63d8;
+    --primary-l1:        #5559c7;
+    --primary-dark:      #4b4fae;
+
+    /* ===== Accent / links ===== */
+    --accent-color:      #3b63c4;
+    --link-blue:         #3b63c4;
+
+    /* ===== Status colors ===== */
+    --success:           #22a06b;
+    --success-light:     #e1f5eb;
+    --success-dark:      #18794e;
+
+    --warning:           #d99000;
+    --warning-light:     #fff4d6;
+    --warning-dark:      #a96800;
+
+    --danger:            #dc4c4c;
+    --danger-light:      #fde8e8;
+    --danger-dark:       #b83c3c;
+
+    /* ===== Other ===== */
+    --like:              #9ca3af;
+    --like-dark:         #dc4c4c;
+
+    --selected-category: #e1f5eb;
+    --rating-star:       #e0a21a;
+    --hovered-rating-star:#edb83f;
+
+    /* ===== Auth gradients ===== */
+    --login-bg-start:    #5559c7;
+    --login-bg-end:      #7655b8;
+
+    /* ===== Messages ===== */
+    --message-in:        #eef0f2;
+    --message-out:       #dfe7f7;
+
+    /* ===== Permanent ===== */
+    --permanent-light:   #ffffff;
+    --permanent-dark:    #111827;
+    --hover-overlay:     rgba(95, 99, 216, 0.08);
+
+    /* ===== Layout ===== */
+    --radius:            12px;
+    --header-height:     60px;
+    --sidebar-width:     250px;
+    --sticky-z-index:    1020;
+
+    /* ===== Sidebar ===== */
+    --sidebar-bg:        #25264a;
+    --sidebar-text:      #e5e7eb;
+    --sidebar-active:    #5f63d8;
+}
+
+[data-theme="dark"] {
+
+    /* ===== Backgrounds ===== */
+    --background:        #0f1115;
+    --background-l1:     #16181d;
+    --background-l2:     #1d2027;
+    --background-l3:     #272b34;
+
+    /* ===== Text ===== */
+    --text-color:        #e4e6eb;
+    --text-color-l1:     #969ba6;
+    --inverse-text-color:#0f1115;
+
+    /* ===== Borders & Shadow ===== */
+    --border-color:      #2b3039;
+    --border-color-l2:   #373d48;
+    --shadow-color:      rgba(0, 0, 0, 0.38);
+    --shadow-color-2:    rgba(0, 0, 0, 0.747);
+
+    /* ===== Primary ===== */
+    --primary-2xlight:   #383b55;
+    --primary-light:     #8589d9;
+    --primary:           #8589e6;
+    --primary-dark:      #6f73cf;
+
+    /* ===== Status colors ===== */
+    --success:           #3dbb7c;
+    --success-light:     #183b2c;
+    --success-dark:      #56ca91;
+
+    --warning:           #e2a83b;
+    --warning-light:     #3b301b;
+    --warning-dark:      #f0bd58;
+
+    --danger:             #e06a6a;
+    --danger-light:      #3d2020;
+    --danger-dark:       #ed7b7b;
+
+    /* ===== Accent / links ===== */
+    --accent-color:      #7fa2e6;
+    --link-blue:         #7fa2e6;
+
+    /* ===== Other ===== */
+    --selected-category: #173b2b;
+    --like:              #8f949e;
+    --like-dark:         #e06a6a;
+
+    --rating-star:       #e2aa42;
+    --hovered-rating-star:#efbd5a;
+
+    /* ===== Auth gradients ===== */
+    --login-bg-start:    #4d50b8;
+    --login-bg-end:      #7050a8;
+
+    /* ===== Messages ===== */
+    --message-in:        #1d2027;
+    --message-out:       #252d52;
+
+    /* ===== Sidebar ===== */
+    --sidebar-bg:        #191b2e;
+    --sidebar-text:      #e4e6eb;
+    --sidebar-active:    #8589e6;
+}

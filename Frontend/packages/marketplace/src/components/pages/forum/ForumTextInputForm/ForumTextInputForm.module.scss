@@ -1,0 +1,24 @@
+@use "@core/css/components/global-mixins" as *;
+
+.form {
+    display: flex;
+    gap: 0.5rem;
+
+    @include mobile {
+        gap: 0.3rem;
+    }
+}
+
+.sendBtn {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.7rem;
+    width: 42px;
+    aspect-ratio: 1;
+    right: 0.2rem;
+    top: 0.2rem;
+
+    @include mobile {
+        padding: 0.7rem .3rem;
+    }
+}

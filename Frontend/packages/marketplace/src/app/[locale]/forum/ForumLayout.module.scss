@@ -1,0 +1,79 @@
+@use "@core/css/components/global-mixins" as *;
+
+$sidebar-width: 350px;
+$sidebar-page: 1200px;
+
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+
+    @include mobile {
+        padding-top: 1rem;
+        min-height: calc(100dvh - var(--header-height));
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+}
+
+.page {
+    height: 100%;
+    flex: 1;
+    @include card;
+    padding: 1.5rem;
+    max-width: calc($sidebar-page - $sidebar-width - 1rem);
+
+    @include mobile {
+        min-height: 100%;
+        height: fit-content;
+        max-width: 100%;
+        padding: .5rem;
+
+        h1 { margin-left: 1rem; }
+
+        h3 { margin-left: .5rem; }
+    }
+}
+
+.sidebar {
+    width: $sidebar-width;
+    min-width: $sidebar-width;
+    @include card;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+    @include mobile {
+        display: none;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.activity {
+    background-color: var(--background-l2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background-color: var(--background-l3);
+    }
+
+    .title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

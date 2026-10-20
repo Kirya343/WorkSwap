@@ -1,0 +1,66 @@
+name: Docker
+
+on:
+    push:
+        branches:
+            - main
+
+env:
+    REGISTRY: ghcr.io
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            packages: write
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  cache: yarn
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            - name: Install dependencies
+              run: yarn install --immutable
+
+            - name: Build marketplace
+              run: yarn workspace workswap-marketplace build
+
+            - name: Build admin
+              run: yarn workspace workswap-admin build
+
+            - name: Log in to GHCR
+              uses: docker/login-action@v3
+              with:
+                  registry: ${{ env.REGISTRY }}
+                  username: ${{ github.actor }}
+                  password: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Build and push marketplace
+              uses: docker/build-push-action@v6
+              with:
+                  context: ./packages/marketplace
+                  file: ./packages/marketplace/Dockerfile
+                  push: true
+                  tags: |
+                      ghcr.io/${{ github.repository_owner }}/workswap-frontend:latest
+                      ghcr.io/${{ github.repository_owner }}/workswap-frontend:${{ github.sha }}
+
+            - name: Build and push admin
+              uses: docker/build-push-action@v6
+              with:
+                  context: ./packages/admin
+                  file: ./packages/admin/Dockerfile
+                  push: true
+                  tags: |
+                      ghcr.io/${{ github.repository_owner }}/workswap-admin:latest
+                      ghcr.io/${{ github.repository_owner }}/workswap-admin:${{ github.sha }}

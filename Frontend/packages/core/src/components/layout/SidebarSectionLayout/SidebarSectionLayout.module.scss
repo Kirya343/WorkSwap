@@ -1,0 +1,88 @@
+@use "@core/css/components/global-mixins" as *;
+
+.page {
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+
+    &.rowMode {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        width: 100%;
+        flex-direction: row;
+        transition: translate 0.3s ease-out;
+
+        &.rowMode {
+            flex-direction: row;
+        }
+
+        &:has(.container.active) {
+            translate: calc((100% + 1rem) * -1);
+        }
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-right: 1rem;
+    border-right: 1px solid var(--border-color);
+
+    &.rowMode {
+        flex-direction: row;
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    @include mobile {
+        flex: 0 0 100%;
+        width: 100%;
+        border: none;
+        padding-right: 0;
+
+        &.rowMode {
+            flex-direction: column;
+        }
+    }
+}
+
+.section {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 8px;
+    display: flex;
+    gap: 0.5rem;
+    text-align: left;
+
+    &.active {
+        background-color: rgba(0, 0, 0, 0.281);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    width: 100%;
+
+    @include mobile {
+        flex: 0 0 100%;
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.mobileActions {
+    justify-content: space-between;
+
+    .backBtn {
+        width: 24px
+    }
+}

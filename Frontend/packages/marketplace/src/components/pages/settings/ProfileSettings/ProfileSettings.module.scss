@@ -1,0 +1,53 @@
+@use "@core/css/components/global-mixins" as *;
+
+.avatarOptions {
+    display: flex;
+    gap: 20px;
+}
+
+.avatarOption {
+    @include flex-column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    span {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    &.selected .avatarPreview {
+        border-color: #4CAF50;
+    }
+}
+
+.avatarPreview {
+    border: 3px solid #ddd;
+    transition: border-color 0.3s;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.uploadAvatar {
+    position: absolute;
+    background-color: var(--background);
+    border: 2px solid var(--border-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    right: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    translate: 20% -20%;
+    cursor: pointer;
+}
+
+.bio {
+    padding-bottom: 30px;
+    padding-right: 4rem;
+    resize: vertical; /* Ограничиваем изменение размера только по вертикали */
+    min-height: 100px; /* Минимальная высота */
+}

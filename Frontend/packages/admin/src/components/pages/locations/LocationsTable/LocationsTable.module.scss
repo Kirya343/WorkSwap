@@ -1,0 +1,116 @@
+.tr:hover .createLocation {
+    opacity: 1;
+}
+
+.expanderButton {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--text-color-l1);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+
+    &:hover {
+        background-color: var(--background-l3);
+        color: var(--text-color);
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.action {
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.trashIcon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.expander-column {
+    width: 40px;
+    padding: 5px !important;
+
+    &.td {
+        width: 3rem;
+        padding-left: 0.75rem;
+        padding-right: 0.25rem;
+        text-align: center;
+    }
+}
+
+.title-column {
+    width: auto;
+    position: relative;
+
+    &.td {
+        min-width: 16rem;
+        font-weight: 500;
+    }
+}
+
+.id-column {
+    width: 40px;
+
+    &.td {
+        width: 8rem;
+        color: var(--text-color-l1);
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+.actions-column {
+    width: 150px;
+}
+
+.createLocation {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+    width: 2rem;
+    height: 2rem;
+    border: 3px dashed var(--text-color-l1);
+    color: var(--text-color-l1);
+    border-radius: 4px;
+    background-color: transparent;
+    opacity: 0;
+    cursor: pointer;
+    transition: 
+        opacity 0.2s ease-in,
+        background-color .1s ease-in;
+
+    &:hover {
+        background-color: var(--background-l1);
+    }
+}

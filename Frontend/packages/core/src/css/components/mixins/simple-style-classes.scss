@@ -1,0 +1,39 @@
+@use "./breakpoints" as *;
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin body-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-center {
+    @include body-center;
+}
+
+.flex-row {
+    @include flex-row;
+    flex-direction: row !important;
+}
+
+.flex-column {
+    @include flex-column;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.d-none {
+    display: none;
+}

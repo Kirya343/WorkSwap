@@ -1,0 +1,13 @@
+{
+    "ui": {
+        "pageInDev": "Tämä sivu on vielä kehitysvaiheessa <br/>Tule myöhemmin takaisin :)"
+    },
+
+    "register": {
+        "invalid_creditails": "Virheelliset kirjautumistiedot"
+    },
+
+    "messenger": {
+        "connectionLost": "Yhteys palvelimeen katkesi! Yhdistetään uudelleen"
+    }
+}

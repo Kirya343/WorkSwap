@@ -1,0 +1,14 @@
+app:
+  url: http://localhost:8001
+  cookie:
+    secure: false
+    domain: "localhost" # ".workswap.org"
+    sameSite: "Strict"
+
+frontend:
+  url: http://localhost:30000
+
+mailjet:
+  api-key: 1234321
+  secret-key: 123454321
+  sender: kirya343@gmail.com

@@ -1,0 +1,32 @@
+{
+    "back": "Takaisin",
+
+    "catalog": "Luettelo",
+    "forum": "Forum",
+    "admin": "Admin",
+    
+    "catalogSidebar": {
+        "links": {
+            "about": "Mikä tämä sivusto on?",
+            "account": "Tili",
+            "createListing": "Luo uusi ilmoitus",
+            "myListings": "Omat ilmoitukset",
+            "myReviews": "Omat arvostelut",
+            "messenger": "Viestini"
+        }
+    },
+    "accountSidebar": {
+        "login": "Kirjaudu sisään",
+        "logout": "Kirjaudu ulos",
+        "links": {
+            "account": "Tili",
+            "my-listings": "Omat ilmoitukset",
+            "favorites": "Suosikit",
+            "messenger": "Viestit",
+            "reviews": "Arvostelut",
+            "settings": "Asetukset",
+            "security": "Turvallisuus",
+            "editProfile": "Muokkaa profiilia"
+        }
+    }
+}

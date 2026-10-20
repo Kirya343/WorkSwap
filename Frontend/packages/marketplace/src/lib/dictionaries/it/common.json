@@ -1,0 +1,212 @@
+{
+    "all-listings": "Tutti gli annunci",
+
+    "placeholders": {
+        "search": "Cerca tra gli annunci",
+        "email": "Inserisci l'email",
+        "category": "Seleziona la categoria...",
+        "priceType": "Seleziona il tipo di prezzo...",
+        "location": "Seleziona la località...",
+        "review": "Scrivi una recensione...",
+        "typeMessage": "Scrivi un messaggio...",
+        "login": "Email",
+        "password": "Password",
+        "passwordConfirm": "Conferma la password",
+        "name": "Nome",
+        "listing": {
+            "title": "Inserisci il titolo dell'annuncio...",
+            "description": "Descrivi l'annuncio..."
+        }
+    },
+    "sorts": {
+        "date": "Per data",
+        "price": "Per prezzo",
+        "rating": "Per valutazione",
+        "views": "Per visualizzazioni",
+        "likes": "По лайкам"
+    },
+    "priceTypes": {
+        "FIXED": "€",
+        "PER_HOUR": "€ / ora",
+        "PER_DAY": "€ / giorno",
+        "NEGOTIABLE": "Trattabile",
+        "SWAP": "Scambio",
+        "FREE": "Gratis",
+        "WANTED_FREE": "Cerco gratis",
+        "null": ""
+    },
+    "statuses": {
+        "published": "Pubblicato",
+        "active": "Attivo",
+        "blocked": "Bloccato",
+        "inactive": "Inattivo",
+        "draft": "Bozza"
+    },
+    "languages": {
+        "ru": "Russo",
+        "en": "Inglese",
+        "fi": "Finlandese",
+        "it": "Italiano"
+    },
+
+    "labels": {
+        "price": "Prezzo",
+        "priceType": "Tipo di prezzo",
+        "images": "Immagini",
+        "category": "Categoria",
+        "location": "Posizione",
+        "title": "Titolo",
+        "description": "Descrizione",
+        "name": "Nome",
+        "phone": "Telefono",
+        "views": "Visualizzazioni",
+        "rating": "Valutazione",
+        "contacts": "Informazioni di contatto",
+        "translations": "Lingue di pubblicazione",
+        "status": {
+            "listing": "Stato dell'annuncio",
+            "event": {
+                "title": "Stato dell'evento",
+                "RECRUITING": "Iscrizioni aperte",
+                "CLOSED": "Iscrizioni chiuse",
+                "FINISHED": "Evento terminato",
+                "ARCHIVED": "In archivio"
+            }
+        },
+
+        "event": {
+            "participants": "Partecipanti",
+            "price": "Prezzo di ingresso",
+            "date": "Data dell'evento",
+            "registerClosingDate": "Data chiusura iscrizioni",
+            "minMaxParticipants": "Partecipanti min/max",
+            "visibility": {
+                "title": "Visibilità",
+                "public": "Aperto a tutti",
+                "private": "Accessibile tramite link"
+            },
+            "recurrence": {
+                "title": "Ripetizione",
+                "repeat": "Ricorrente",
+                "single": "Singolo"
+            },
+            "recurrenceParam": {
+                "title": "Frequenza di ripetizione",
+                "NONE": "Nessuna",
+                "DAILY": "Giornaliera",
+                "WEEKLY": "Settimanale",
+                "MONTHLY": "Mensile",
+                "YEARLY": "Annuale"
+            }
+        },
+
+        "settings": {
+            "main": "Impostazioni generali",
+            "event": "Impostazioni evento",
+            "product": "Impostazioni prodotto",
+            "service": "Impostazioni servizio"
+        }
+    },
+
+    "titles": {
+        "account": "Il mio account",
+        "favorites": "Preferiti",
+        "myListings": "I miei annunci",
+        "messenger": "Messaggi",
+        "settings": "Impostazioni utente",
+        "security": "Sicurezza",
+        "listingCreate": "Creazione annuncio",
+        "listingManage": "Gestione annuncio",
+        "listingDrafts": "Le mie bozze"
+    },
+
+    "fallbacks": {
+        "noTitle": "Nessun titolo",
+        "noListings": "Nessun annuncio trovato",
+        "noMessages": "Nessun messaggio",
+        "pageNotFound": "Pagina non trovata"
+    },
+
+    "catalog": {
+        "sidebar": {
+            "search": "Cerca",
+            "sort": "Ordinamento",
+            "filters": "Filtri",
+            "hasReviews": "Con recensioni",
+            "translationsFilter": "Filtra per lingua",
+            "usefulLinks": "Link utili"
+        }
+    },
+
+    "settings": {
+        "avatarTypes": {
+            "uploaded": "Caricato",
+            "google": "Google",
+            "default": "Predefinito"
+        },
+        "labels": {
+            "baseInfo": "Informazioni di base",
+            "privacy": "Privacy",
+            "avatar": "Avatar",
+            "myLanguages": "Le lingue che conosco",
+            "myLocation": "La mia posizione",
+            "bio": "Su di me"
+        },
+        "sections": {
+            "PROFILE": "Profilo",
+            "PRIVACY": "Privacy",
+            "PREFERENCES": "Preferenze"
+        }
+    },
+
+    "messenger": {
+        "placeholders": {
+            "noDialogs": "Non hai ancora nessun messaggio.",
+            "startChats": "Avvia una conversazione rispondendo a un annuncio o inviando un messaggio a un utente."
+        }
+    },
+
+    "listing": {
+        "similarListings": "Annunci simili"
+    },
+
+    "profile": {
+        "listings": "Annunci dell'utente"
+    },
+
+    "reviews": {
+        "listLabel": "Recensioni",
+        "item": {
+            "label": "Lascia una recensione",
+            "rating": "Valutazione",
+            "text": "Testo della recensione"
+        }
+    },
+
+    "login": {
+        "label": "Accedi al tuo account"
+    },
+
+    "register": {
+        "label": "Registrazione",
+        "welcomeUser": "Benvenuto/a, {{name}}!",
+        "acceptTerms": "Accetto i <0>Termini di utilizzo</0> e l'<1>Informativa sulla privacy</1>",
+        "acceptStudy": "Comprendo che questo è un progetto didattico e che il sito non è un servizio commerciale",
+        "afterRegister": "Dopo la conferma della registrazione verrai reindirizzato al catalogo."
+    },
+
+    "listingCreate": {
+        "selectType": "Che tipo di annuncio vuoi creare?"
+    },
+    "listingManage": {
+        "sections": {
+            "SETTINGS": "Impostazioni",
+            "ANALYTICS": "Analisi",
+            "MESSAGES": "Risposte"
+        }
+    },
+    "forum": {
+        "popularTopics": "Discussioni popolari",
+        "lastActivity": "Ultima attività"
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "common": {
+        "save": "Tallenna",
+        "cancel": "Peruuta",
+        "delete": "Poista",
+        "edit": "Muokkaa"
+    },
+    
+    "login": "Kirjaudu sisään",
+    "loginToWrite": "Kirjaudu sisään kirjoittaaksesi",
+    "loginGoogle": "Kirjaudu Googlella",
+    "registerButton": "Viimeistele rekisteröinti",
+    "returnToCatalog": "Palaa katalogiin",
+    "createAccount": "Luo tili",
+
+    "menu": {
+        "notifications": "Hälytykset",
+        "helpBeBetter": "Auta parantamaan sivustoa",
+        "contactToSupport": "Ota yhteyttä kehittäjään"
+    },
+
+    "upload": {
+        "image": "Lataa kuva"
+    },
+    "special": {
+        "connectTelegram": "Yhdistä Telegram"
+    },
+    "listing": {
+        "addNew": "Lisää uusi",
+        "createListing": "Luo ilmoitus",
+        "goToMyListings": "Siirry omiin ilmoituksiin",
+        "publish": "Julkaise",
+        "cleanDraft": "Tyhjennä luonnos",
+        "delete": "Poista ilmoitus",
+        "saveTranslation": "Tallenna",
+        "favorite": {
+            "add": "Lisää suosikkeihin",
+            "remove": "Poista suosikeista"
+        },
+        "contactToAuthor": "Lähetä viesti",
+        "edit": "Muokkaa ilmoitusta",
+        "manage": "Hallita",
+        "save": "Tallenna"
+    },
+
+    "event": {
+        "participation": {
+            "join": "Osallistu",
+            "leave": "Olet jo osallistuja"
+        }
+    },
+    "review": {
+        "create": "Jätä arvostelu"
+    },
+
+    "messenger": {
+        "profile": "Profiili",
+        "listing": "Ilmoitus"
+    },
+
+    "security": {
+        "deleteAccount": "Poista tili"
+    },
+
+    "forum": {
+        "readTopic": "Lue",
+        "createTopic": "Luo aihe",
+        "expand": "Näytä kokonaan…",
+        "collapse": "Piilota"
+    }
+}

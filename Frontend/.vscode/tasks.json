@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Frontend",
+            "type": "shell",
+            "command": "cd packages/marketplace && yarn dev",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run Admin",
+            "type": "shell",
+            "command": "cd packages/admin && yarn dev",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run applications",
+            "dependsOn": [
+                "Run Frontend",
+                "Run Admin"
+            ],
+            "dependsOrder": "parallel"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+@use "@core/css/components/global-mixins" as *;
+
+.meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color-l1);
+    justify-content: space-between;
+    align-items: center;
+
+    .views {
+        font-size: 0.8rem;
+        color: var(--text-color-l1);
+    }
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 0;
+    white-space: pre-line;
+}
+
+.actions {
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.similarListings {
+    margin-bottom: 2rem;
+
+    h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+}

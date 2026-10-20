@@ -1,0 +1,8 @@
+@use "./simple-style-classes" as *;
+
+@mixin card {
+    background: var(--background-l1);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    @include flex-column;
+}

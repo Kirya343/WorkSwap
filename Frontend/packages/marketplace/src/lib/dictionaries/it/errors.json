@@ -1,0 +1,13 @@
+{
+    "ui": {
+        "pageInDev": "Questa pagina è ancora in fase di sviluppo <br/>Torna a trovarci più tardi :)"
+    },
+    
+    "register": {
+        "invalid_creditails": "Credenziali non valide"
+    },
+
+    "messenger": {
+        "connectionLost": "Errore di connessione al server! Riconnessione in corso"
+    }
+}

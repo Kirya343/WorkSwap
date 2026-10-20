@@ -1,0 +1,12 @@
+spring:
+  config:
+    import:
+      - classpath:config/s3.yml
+      - classpath:config/rabbitmq.yml
+      - classpath:config/database.yml
+      - classpath:config/main.yml
+      - classpath:config/logging.yml
+      - classpath:config/cors.yml
+
+jwt:
+  public-key-location: classpath:ssl/jwt-public.pem

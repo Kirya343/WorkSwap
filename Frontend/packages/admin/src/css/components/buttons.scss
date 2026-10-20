@@ -1,0 +1,142 @@
+@use "@core/css/components/global-mixins" as *;
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border: 0 solid transparent;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+
+    @include mobile {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    &.btn-primary {
+        background-color: var(--primary);
+        color: var(--permanent-light);
+        border: 1px solid var(--primary);
+
+        &:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+    }
+
+    &.btn-outline-danger {
+        border: 1px solid var(--danger);
+        color: var(--danger);
+        background-color: transparent;
+
+        &:hover {
+            background-color: var(--danger);
+            color: var(--permanent-light);
+        }
+    }
+
+    &.btn-outline-primary {
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        background-color: transparent;
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--permanent-light);
+        }
+    }
+
+    &.btn-sm {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    &.btn-primary {
+        background-color: var(--primary);
+        color: var(--permanent-light);
+
+        &:hover {
+            background-color: var(--primary-dark);
+        }
+    }
+
+    &.btn-danger {
+        background-color: #ef4444;
+        color: var(--permanent-light);
+
+        &:hover {
+            background-color: #dc2626;
+        }
+    }
+
+    &.btn-gold {
+        background-color: #d89e00;
+        color: var(--permanent-light);
+
+        &:hover {
+            background-color: #a87c01;
+        }
+    }
+
+    &.btn-confirm {
+        background-color: #29a333;
+        color: var(--permanent-light);
+        
+        &:hover {
+            background-color: #13791b;
+        }
+    }
+
+    &.btn-secondary {
+        background-color: var(--border-color);
+        color: var(--text-color);
+
+        &:hover {
+            background-color: #d1d5db;
+        }
+    }
+}
+
+.button-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-overlay {
+    position: absolute;
+    z-index: 10;
+    height: auto;
+    transform: translateY(-18px) translateX(-5px);
+}
+
+.btn-overlay-group {
+    position: absolute;
+    z-index: 10;
+    height: auto;
+    transform: translateY(-18px) translateX(-14px);
+    gap: 0.5rem;
+}
+
+.btn-overlay-higher-group {
+    position: absolute;
+    transform: translateY(-50px);
+    display: inline-flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.btn-actions-group {
+    display: inline-flex;
+    gap: 0.5rem;
+
+    & > button {
+        display: flex;
+    }
+}

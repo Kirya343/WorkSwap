@@ -1,0 +1,76 @@
+@use "@core/css/components/global-mixins" as *;
+
+.permission {
+    padding: 1rem;
+    @include flex-row;
+    gap: 2rem;
+    border-bottom: 1px dashed var(--border-color);
+    justify-content: space-between;
+    position: relative;
+
+    @include mobile {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+}
+
+.comment {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8rem;
+    color: var(--text-color-l1);
+}
+
+.toggler {
+    position: absolute;
+    right: 3rem;
+
+    @include mobile {
+        right: 2rem;
+    }
+}
+
+.actionsBtn {
+    color: var(--text-color);
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 8px;
+    padding: 0.2rem 0.2rem;
+}
+
+.actionsCard {
+    position: absolute;
+    border-radius: 8px;
+    background-color: var(--background);
+    border: 2px solid var(--border-color);
+    bottom: -2rem;
+    right: 0;
+    padding: 0.5rem 0.8rem;
+    z-index: 100;
+}
+
+.inputName {
+    border: 1px solid var(--border-color);
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    width: 50%;
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.inputComment {
+    border: 1px solid var(--border-color);
+    border-radius: 0.3rem;
+    width: 50%;
+    background-color: transparent;
+}
+
+.kebab {
+    position: absolute;
+    right: 1rem;
+
+    svg {
+        color: var(--text-color);
+    }
+}

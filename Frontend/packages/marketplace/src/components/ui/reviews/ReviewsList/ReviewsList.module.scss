@@ -1,0 +1,25 @@
+@use "@core/css/components/global-mixins" as *;
+
+section.reviews {
+    background: var(--background-l1);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    margin-bottom: 2rem;
+
+    @include mobile {
+        padding: 1rem;
+    }
+
+    h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+.list {
+    display: inline-flex;
+    overflow-x: auto;
+    max-width: 100%;
+    gap: 1.5rem;
+}

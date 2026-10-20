@@ -1,0 +1,52 @@
+
+.createBtn {
+    margin-left: auto;
+    width: fit-content;
+    font-size: 1rem;
+
+    i {
+        margin-right: 0.3rem;
+        font-size: 1.1rem;
+    }
+}
+
+.form {
+    display: flex;
+    gap: 0.5rem;
+
+    .sendBtn {
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 0.7rem;
+        aspect-ratio: 1;
+        right: 0.2rem;
+        top: 0.2rem;
+        width: 42px;
+        margin-bottom: auto;
+
+        svg {
+            width: 20px;
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.contentInput {
+    border: 0px;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 8px 1rem;
+    height: 38px;
+    min-height: 38px;
+    transition: border-color 0.2s ease-in;
+
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid var(--primary);
+    }
+}

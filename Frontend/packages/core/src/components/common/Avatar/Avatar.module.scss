@@ -1,0 +1,9 @@
+.avatar {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+
+    &.interactive {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,32 @@
+.participants {
+    display: flex;
+    flex-direction: column;
+}
+
+.participant {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.chat {
+    min-height: 500px;
+
+    /* .chat-window {
+        max-height: 80vh;
+        width: 100%;
+
+        @include mobile {
+            position: static;
+            height: 100%;
+            padding-bottom: 0;
+
+            .message-input-container {
+                position: static;
+            }
+        }
+    } */
+}

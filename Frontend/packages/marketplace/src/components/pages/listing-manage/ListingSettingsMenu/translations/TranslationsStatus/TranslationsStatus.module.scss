@@ -1,0 +1,40 @@
+.translationStatus {
+    height: 1.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    position: absolute;
+    font-size: 1.1rem;
+    z-index: 10;
+
+    .progress {
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        translate: 0 1px;
+    }
+
+    * {
+        z-index: 79;
+        position: absolute;
+    }
+
+    .second {
+        color: var(--success);
+        z-index: 81;
+    }
+
+    .first {
+        color: var(--like);
+        z-index: 80;
+    }
+
+    .third {
+        color: #ffffff;
+        z-index: 82;
+        font-size: 0.8rem;
+    }
+}

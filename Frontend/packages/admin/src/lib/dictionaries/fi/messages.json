@@ -1,0 +1,54 @@
+{
+    "confirms": {
+        "deleteAccount": "Oletko varma, että haluat poistaa tilin? Tämä toiminto on peruuttamaton.",
+        "deleteListing": "Haluatko varmasti poistaa ilmoituksen? Tätä toimintoa ei voi peruuttaa."
+    },
+
+    "notification": {
+        "success": {
+            "listingDelete": "Ilmoitus poistettu",
+            "publish": "Ilmoitus julkaistu",
+            "createDraft": "Ilmoituksen luonnos tallennettu",
+            "listingUpdate": "Ilmoitus päivitetty",
+            "reviewCreate": "Arvostelu tallennettu onnistuneesti",
+            "copyListingLink": "Ilmoituksen linkki kopioitu",
+            "copyEmail": "Sähköposti kopioitu",
+            "copyPhone": "Puhelinnumero kopioitu",
+            "copyTelegramTag": "Tunniste kopioitu"
+        },
+        "error": {
+            "listingDelete": "Virhe ilmoituksen poistossa",
+            "listingUpdate": "Virhe Ilmoituksen päivitessä",
+            "reviewCreate": "Arvostelua ei voitu jättää",
+            "toggleFavorite": "Virhe suosikin vaihtamisessa"
+        },
+        "misc": {
+            "hadDraft": "Sinulla on vielä tallennettu luonnos",
+            "nullReviewText": "Kirjoita arvosteluteksti",
+            "nullReviewRating": "Anna ilmoitukselle arvio",
+            "error": {
+                "draftsLoading": "Virhe luonnosten lataamisessa",
+                "listingCreate": "Virhe ilmoituksen luomisessa"
+            }
+        }
+    },
+
+    "login": {
+        "email_required": "Syötä sähköposti",
+        "email_invalid": "Virheellinen sähköpostimuoto",
+        "password_required": "Syötä salasana",
+        "password_short": "Salasanan on oltava vähintään 8 merkkiä",
+        "password_mismatch": "Salasanat eivät täsmää",
+        "name_required": "Syötä nimi",
+        "name_invalid": "Nimessä on virheellisiä merkkejä",
+        "login_error": "Kirjautumisvirhe",
+        "login_success": "Olet kirjautunut onnistuneesti",
+        "account_not_exists": "Tällaista tiliä ei ole olemassa",
+        "account_no_password_login": "Tähän tiliin ei voi kirjautua salasanalla",
+        "password_incorrect": "Väärä salasana",
+        "email_exists": "Tämä sähköposti on jo rekisteröity",
+        "register_success": "Olet rekisteröitynyt onnistuneesti",
+        "user_not_found": "Käyttäjää ei löytynyt",
+        "register_error": "Rekisteröintivirhe"
+    }
+}

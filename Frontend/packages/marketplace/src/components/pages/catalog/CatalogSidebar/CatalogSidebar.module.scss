@@ -1,0 +1,133 @@
+@use "@core/css/components/global-mixins" as *;
+
+$sidebar-width: var(--sidebar-width);
+$radius: var(--radius);
+
+.sidebar {
+	display: flex;
+    flex-direction: column;
+	flex: 0 0 $sidebar-width;
+	padding: 1rem 0;
+	gap: 1.5rem;
+
+    height: fit-content;
+    position: sticky;
+    top: 0;
+
+	@include laptop-lg {
+		position: fixed;
+		top: 200px;
+		right: 0;
+		transform: translateX(100%);
+		width: 100%;
+		height: fit-content;
+		max-width: $sidebar-width;
+		transition: transform 0.3s ease;
+		z-index: 100;
+		padding: 0;
+		border-radius: 0 0 0 12px;
+		overflow: visible;
+		display: flex;
+		flex-direction: row;
+		justify-content: end;
+		gap: 0;
+
+		&.active {
+			transform: translateX(0);
+		}
+	}
+}
+	
+.btnFilter {
+    display: none;
+    position: absolute;
+    left: -3rem;
+    background: var(--primary);
+    border: none;
+    border-radius: 12px 0 0 12px;
+    height: 3rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        color: var(--background-l1);
+        transition: transform 0.2s;
+    }
+
+    @include laptop-lg {
+        display: flex;
+    }
+}
+
+.sortingSidebar {
+    width: $sidebar-width;
+    align-self: flex-start;
+    background: var(--background-l1);
+    border-radius: $radius;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    position: static;
+    @include flex-column;
+    gap: 1rem;
+
+    @include laptop-lg {
+        width: $sidebar-width;
+        align-self: flex-start;
+        background: var(--background-l1);
+        border-radius: 0 0 0 $radius;
+        border: 2px solid var(--primary);
+        border-right-color: transparent;
+        padding: 1.25rem;
+        box-shadow: 0 2px 8px var(--shadow-color);
+        position: sticky;
+        margin-bottom: 0;
+        bottom: 0;
+    }
+
+    &.links {
+        display: block;
+
+        @include laptop-lg {
+            display: none !important;
+        }
+    }
+
+    section {
+        
+        h5 {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+			
+.listGroup {
+    list-style: none;
+    @include flex-column;
+    gap: 0.5rem;
+}
+
+.listGroupItem {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+    border-radius: $radius;
+    line-height: 1.5;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    
+    &:hover {
+        border-color: var(--primary);
+    }
+    
+    &.active {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: var(--background-l1);
+    }
+}

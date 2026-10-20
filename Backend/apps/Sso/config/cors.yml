@@ -1,0 +1,13 @@
+cors:
+  domains: 
+    - https://workswap.org
+    - https://api.workswap.org
+    - https://auth.workswap.org
+    - https://dash.workswap.org
+    - http://localhost:30000
+    - http://localhost:30008
+    - http://localhost:3000
+    - http://localhost:8001
+    - http://localhost:8083
+    - https://bookish-space-potato-g46wx5p49q5w3ww9-30000.app.github.dev
+    - https://bookish-space-potato-g46wx5p49q5w3ww9-30008.app.github.dev

@@ -1,0 +1,29 @@
+spring:
+  central-datasource:
+    jdbc-url: jdbc:mariadb://workswap-mariadb-main:3306/${MARIADB_MAIN_DATABASE}?useSSL=false&serverTimezone=UTC
+    username: ${MARIADB_MAIN_SERVER_USER}
+    password: ${MARIADB_MAIN_SERVER_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+    connection-timeout: 30000
+    minimum-idle: 2
+    maximum-pool-size: 10
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    leak-detection-threshold: 15000
+    validation-timeout: 5000
+    keepalive-time: 300000
+  statistics-datasource:
+    jdbc-url: jdbc:mariadb://mariadb-statistic:3306/${MARIADB_STATISTIC_DATABASE}?useSSL=false&serverTimezone=UTC
+    username: ${MARIADB_STATISTIC_SERVER_USER}
+    password: ${MARIADB_STATISTIC_SERVER_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+    
+    connection-timeout: 30000
+    minimum-idle: 2
+    maximum-pool-size: 10
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    leak-detection-threshold: 15000
+    validation-timeout: 5000
+    keepalive-time: 300000

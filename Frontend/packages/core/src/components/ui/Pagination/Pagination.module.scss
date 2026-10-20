@@ -1,0 +1,62 @@
+@use "@core/css/components/global-mixins" as *;
+
+.pagination {
+    /* position: sticky; */
+    padding: 1.5rem;
+    display: flex;
+    gap: 0.6rem;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: auto;
+    bottom: 1.5rem;
+    z-index: 50;
+    background-color: var(--background);
+    border-radius: var(--radius);
+
+    @include mobile {
+        bottom: 0;
+        padding: .5rem;
+    }
+
+    button {
+        border: 2px solid var(--primary);
+        background-color: transparent;
+        color: var(--text-color);
+        padding: 1rem;
+        border-radius: var(--radius);
+        cursor: pointer;
+        outline: 2px solid transparent;
+        transition: all 0.4s ease;
+
+        @include mobile {
+            padding: .3rem 1rem;
+        }
+        
+        &:hover {
+            border: 2px solid var(--primary-dark);
+            outline: 2px solid var(--primary-dark);
+        }
+
+        &:disabled {
+            cursor:not-allowed;
+            outline: 0;
+            border: 2px solid var(--primary);
+        }
+
+        &.pageNumber {
+            font-size: 1.1rem;
+            font-weight: 700;
+            aspect-ratio: 1;
+            padding: 0.5rem 1rem;
+
+            @include mobile {
+                padding: .3rem 1rem;
+            }
+
+            &.active {
+                background-color: var(--primary);
+                color: var(--inverse-text-color);
+            }
+        }
+    }
+}

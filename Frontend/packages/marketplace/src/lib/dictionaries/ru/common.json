@@ -1,0 +1,218 @@
+{
+    "all-listings": "Все объявления",
+
+    "placeholders": {
+        "search": "Поиск по объявлениям",
+        "email": "Введите email",
+        "category": "Выберите категорию...",
+        "priceType": "Выберите тип цены...",
+        "location": "Выберите локацию...",
+        "review": "Напишите отзыв...",
+        "typeMessage": "Напишите сообщение...",
+        "login": "Email",
+        "password": "Пароль",
+        "passwordConfirm": "Подтвердите пароль",
+        "name": "Имя",
+        "listing": {
+            "title": "Введите название объявления...",
+            "description": "Опишите объявление..."
+        }
+    },
+    "sorts": {
+        "date": "По дате",
+        "price": "По цене",
+        "rating": "По рейтингу",
+        "views": "По просмотрам",
+        "likes": "По лайкам"
+    },
+    "priceTypes": {
+        "FIXED": "€",
+        "PER_HOUR": "€ / час",
+        "PER_DAY": "€ / день",
+        "NEGOTIABLE": "Договорная",
+        "SWAP": "Обмен",
+        "FREE": "Бесплатно",
+        "WANTED_FREE": "Ищу бесплатно",
+        "null": ""
+    },
+    "statuses": {
+        "published": "Опубликовано",
+        "active": "Активно",
+        "blocked": "Заблокировано",
+        "inactive": "Не активно",
+        "draft": "Черновик"
+    },
+    "languages": {
+        "ru": "Русский",
+        "en": "Английский",
+        "fi": "Финский",
+        "it": "Итальянский"
+    },
+
+    "labels": {
+        "price": "Цена",
+        "priceType": "Тип цены",
+        "images": "Изображения",
+        "category": "Категория",
+        "location": "Местоположение",
+        "title": "Название",
+        "description": "Описание",
+        "name": "Имя",
+        "phone": "Телефон",
+        "views": "Просмотры",
+        "rating": "Рейтинг",
+        "contacts": "Контактная информация",
+        "translations": "Языки публикации",
+        "status": {
+            "listing": "Статус объявления",
+            "event": {
+                "title": "Статус события",
+                "RECRUITING": "Набор участников",
+                "CLOSED": "Набор участников закрыт",
+                "FINISHED": "Событие закончено",
+                "ARCHIVED": "В архиве"
+            }
+        },
+
+        "event": {
+            "participants": "Участники",
+            "price": "Цена посещения",
+            "date": "Дата проведения",
+            "registerClosingDate": "Дата закрытия регистрации",
+            "minMaxParticipants": "Участники минимально/максимально",
+            "visibility": {
+                "title": "Доступность",
+                "public": "Открыто для всех",
+                "private": "Доступ по ссылке"
+            },
+            "recurrence": {
+                "title": "Повторение",
+                "repeat": "Многоразовое",
+                "single": "Одноразовое"
+            },
+            "recurrenceParam": {
+                "title": "Частота повторения",
+                "NONE": "Нет",
+                "DAILY": "Ежедневно",
+                "WEEKLY": "Еженедельно",
+                "MONTHLY": "Ежемесячно",
+                "YEARLY": "Ежегодно"
+            }
+        },
+
+        "settings": {
+            "main": "Общие настройки",
+            "event": "Настройки события",
+            "product": "Настройки товара",
+            "service": "Настройки услуги"
+        }
+    },
+
+    "titles": {
+        "account": "Мой аккаунт",
+        "favorites": "Избранное",
+        "myListings": "Мои объявления",
+        "myReviews": "Мои отзывы",
+        "messenger": "Сообщения",
+        "settings": "Настройки пользователя",
+        "security": "Безопасность",
+        "listingCreate": "Создание объявления",
+        "listingManage": "Управление объявлением",
+        "listingDrafts": "Мои черновики"
+    },
+
+    "fallbacks": {
+        "noTitle": "Нет названия",
+        "noListings": "Объявлений не найдено",
+        "noMessages": "Нет сообщений",
+        "pageNotFound": "Страница не найдена"
+    },
+
+    "catalog": {
+        "sidebar": {
+            "search": "Поиск",
+            "sort": "Сортировка",
+            "filters": "Фильтры",
+            "hasReviews": "С отзывами",
+            "translationsFilter": "Фильтровать по языкам",
+            "usefulLinks": "Полезные ссылки"
+        }
+    },
+
+    "settings": {
+        "avatarTypes": {
+            "uploaded": "Загруженный",
+            "google": "Google",
+            "default": "Стандартный"
+        },
+        "labels": {
+            "baseInfo": "Основная информация",
+            "privacy": "Конциденциальность",
+            "avatar": "Аватар",
+            "myLanguages": "Языки которыми я владею",
+            "myLocation": "Моё местоположение",
+            "bio": "О себе",
+            "theme": "Тема"
+        },
+        "sections": {
+            "PROFILE": "Профиль",
+            "PRIVACY": "Конфиденциальность",
+            "PREFERENCES": "Предпочтения"
+        }
+    },
+
+    "messenger": {
+        "placeholders": {
+            "noDialogs": "У вас пока нет сообщений.",
+            "startChats": "Начните общение, ответив на объявление или отправив сообщение пользователю."
+        }
+    },
+
+    "listing": {
+        "similarListings": "Похожие объявления"
+    },
+
+    "profile": {
+        "listings": "Объявления пользователя"
+    },
+
+    "reviews": {
+        "listLabel": "Отзывы",
+        "item": {
+            "label": "Оставьте свой отзыв",
+            "rating": "Оценка",
+            "text": "Текст отзыва"
+        }
+    },
+
+    "login": {
+        "label": "Вход в аккаунт"
+    },
+
+    "register": {
+        "label": "Регистрация",
+        "welcomeUser": "Добро пожаловать, {{name}}!",
+        "acceptTerms": "Я принимаю <0>Условия пользования</0> и <1>Политику конфиденциальности</1>",
+        "acceptStudy": "Я понимаю, что это учебный проект и сайт не является коммерческим сервисом",
+        "afterRegister": "После подтверждения регистрации вы будете перенаправлены в каталог."
+    },
+
+    "listingCreate": {
+        "selectType": "Какое объявление вы хотите создать?"
+    },
+    "listingManage": {
+        "sections": {
+            "SETTINGS": "Настройки",
+            "ANALYTICS": "Аналитика",
+            "MESSAGES": "Отклики"
+        }
+    },
+    "forum": {
+        "popularTopics": "Популярные темы",
+        "lastActivity": "Последняя активность"
+    },
+    "theme": {
+        "light": "Светлая",
+        "dark": "Темная"
+    }
+}

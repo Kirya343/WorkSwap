@@ -1,0 +1,155 @@
+@use "@core/css/components/global-mixins" as *;
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+@mixin btn-outline($color, $hover-color, $text-color: var(--background-l1)) {
+    border: 1px solid $color;
+    color: $color;
+    background-color: transparent;
+
+    &:hover,
+    &.selected {
+        background-color: $hover-color;
+        color: $text-color;
+    }
+}
+
+// Миксин для залитых кнопок
+@mixin btn-filled($bg-color, $hover-bg, $text-color: var(--permanent-light), $border-color: null) {
+    background-color: $bg-color;
+    color: $text-color;
+    @if $border-color != null {
+        border: 1px solid $border-color;
+    } @else {
+        border: 0;
+    }
+
+    &:hover,
+    &.selected {
+        background-color: $hover-bg;
+        @if $border-color != null {
+            border-color: $hover-bg;
+        }
+    }
+}
+
+// ==============================
+// Контурные кнопки
+// ==============================
+.btn-outline-danger {
+    @include btn-outline(var(--danger), var(--danger), var(--background-l1));
+}
+
+.btn-outline-primary {
+    @include btn-outline(var(--primary), var(--primary-dark));
+}
+
+// ==============================
+// Залитые кнопки
+// ==============================
+.btn-danger {
+    @include btn-filled(var(--danger), var(--danger-dark), var(--background-l1));
+}
+
+.btn-primary {
+    @include btn-filled(var(--primary), var(--primary-dark), var(--permanent-light), var(--primary));
+}
+
+.btn-primary-light {
+    @include btn-filled(var(--primary-light), var(--primary), var(--inverse-text-color), var(--primary-light));
+}
+
+.btn-gold {
+    @include btn-filled(var(--gold), var(--gold-dark), var(--permanent-light), var(--gold));
+}
+
+.btn-success {
+    @include btn-filled(var(--success), var(--success), var(--permanent-light));
+    padding: 0.7rem 1rem;
+
+    &:disabled {
+        color: var(--inverse-text-color);
+        background-color: var(--success-light);
+        border: 0;
+    }
+}
+
+// ==============================
+// Малые и вспомогательные кнопки
+// ==============================
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+// ==============================
+// Лайки и overlay
+// ==============================
+.like {
+    color: var(--like) !important;
+    width: 28px;
+    height: 28px;
+
+    &.active,
+    &:hover {
+        color: var(--like-dark) !important;
+    }
+}
+
+.overlay-actions {
+    position: absolute;
+    width: max-content;
+    height: 2.5rem;
+    z-index: 50;
+    display: inline-flex;
+    transition: all 0.2s ease;
+    background-color: var(--background-l2);
+    border: 2px solid var(--border-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 1.25rem;
+    gap: 0.2rem;
+
+    .devider {
+        border-right: 2px solid var(--border-color-l2);
+    }
+
+    &.top { top: 0.7rem; }
+    &.right { right: 0.7rem; }
+    &.left { left: 0.7rem; }
+    &.bottom { bottom: 0.7rem; }
+    &.top-center {
+        top: 0;
+        left: 50%;
+        translate: -50% 0;
+        border-top: 0;
+        height: 2.9rem;
+        padding: 0.4rem;
+        border-radius: 0 0 1.25rem 1.25rem;
+    }
+
+    .overlay-action-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        width: 40px;
+        height: 30px;
+        border-radius: 8px;
+    }
+
+    @include mobile {
+        &.hover-show { opacity: 1; }
+    }
+}

@@ -1,0 +1,29 @@
+@use "@core/css/components/global-mixins" as *;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 100%;
+    overflow: visible;
+
+    @include laptop-lg {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    @include laptop {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

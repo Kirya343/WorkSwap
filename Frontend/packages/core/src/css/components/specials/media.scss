@@ -1,0 +1,23 @@
+@use "@core/css/components/global-mixins" as *;
+
+.media-only-flex {
+    display: none !important; 
+
+    @include mobile {
+        display: flex !important;
+    }
+}
+
+.media-only-block {
+    display: none !important; 
+
+    @include mobile {
+        display: block !important;
+    }
+}
+
+@include mobile {
+    .normal-only {
+        display: none !important;
+    }
+}

@@ -1,0 +1,80 @@
+@use "@core/css/components/global-mixins" as *;
+
+.box {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dialog {
+    display: flex;
+    padding: 0.7rem 0.7rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.4s;
+    gap: 1rem;
+
+    &:hover, &.active{
+        background-color: var(--background);
+
+        .userAvatar {
+            border-color: var(--background);
+        }
+    }
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+
+    h4 {
+        font-size: 1rem;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.time {
+    font-size: 0.75rem;
+    color: var(--text-color-l1);
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.preview {
+    font-size: 0.85rem;
+    color: var(--text-color-l1);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.unreadCount {
+    background-color: var(--primary);
+    padding: 2px 6px;
+    border-radius: 0.75em;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1;
+    min-width: 1.5em;
+    height: 1.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+@use "@core/css/components/global-mixins" as *;
+
+.hover:hover {
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    @include mobile-exclude {
+        background-color: rgba(0, 0, 0, 0.281) !important;
+    }
+}
+
+.red-hover:hover {
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: rgba(165, 83, 83, 0.678) !important;
+}

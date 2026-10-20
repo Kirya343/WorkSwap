@@ -1,0 +1,23 @@
+.openModal {
+    border-radius: var(--radius);
+    padding: 1rem 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    
+    svg {
+        height: 24px;
+    }
+}
+
+.contactBtn {
+    padding: 0.5rem 1rem;
+    display: flex;
+    color: var(--text-color);
+    gap: 0.5rem;
+    border-radius: var(--radius);
+
+    svg {
+        height: 24px;
+    }
+}

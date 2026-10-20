@@ -1,0 +1,55 @@
+{
+    "confirms": {
+        "deleteAccount": "Вы уверены, что хотите удалить аккаунт? Это действие необратимо.",
+        "deleteListing": "Вы уверены, что хотите удалить объявление? Это действие необратимо."
+    },
+
+    "notification": {
+        "success": {
+            "listingDelete": "Объявление удалено",
+            "publish": "Объявление опубликовано",
+            "createDraft": "Черновик объявления сохранён",
+            "listingUpdate": "Объявление обновлено",
+            "reviewCreate": "Отзыв успешно сохранён",
+            "copyListingLink": "Ссылка на объявление скопирована",
+            "copyEmail": "Email скопирован",
+            "copyPhone": "Номер телефона скопирован",
+            "copyTelegramTag": "Тег Скопирован"
+        },
+        "error": {
+            "listingDelete": "Ошибка при удалении объявления",
+            "listingUpdate": "Ошибка обновления объявления",
+            "reviewCreate": "Не удалось оставить отзыв",
+            "toggleFavorite": "Ошибка при переключении избранного"
+        },
+
+        "misc": {
+            "hadDraft": "У вас остался сохранённый черновик",
+            "nullReviewText": "Введите текст отзыва",
+            "nullReviewRating": "Поставьте объявлению оценку",
+            "error": {
+                "draftsLoading": "Ошибка загрузки черновиков",
+                "listingCreate": "Ошибка при создании объявления"
+            }
+        }
+    },
+
+    "login": {
+        "email_required": "Введите email",
+        "email_invalid": "Неверный формат email",
+        "password_required": "Введите пароль",
+        "password_short": "Пароль должен содержать минимум 8 символов",
+        "password_mismatch": "Пароли не совпадают",
+        "name_required": "Введите имя",
+        "name_invalid": "Имя содержит недопустимые символы",
+        "login_error": "Ошибка входа в аккаунт",
+        "login_success": "Вы успешно авторизовались",
+        "account_not_exists": "Такого аккаунта не существует",
+        "account_no_password_login": "В этот аккаунт нельзя зайти через пароль",
+        "password_incorrect": "Неверный пароль",
+        "email_exists": "Такой email уже зарегистрирован",
+        "register_success": "Вы успешно зарегистрировались",
+        "user_not_found": "Пользователь не найден",
+        "register_error": "Ошибка регистрации пользователя"
+    }
+}

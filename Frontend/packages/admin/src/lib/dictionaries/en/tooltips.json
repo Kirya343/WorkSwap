@@ -1,0 +1,16 @@
+{
+    "settings": {
+        "privacy": "Display your contact information to other users",
+        "myLanguages": "Specify multiple languages to see more relevant listings",
+        "myLocation": "This setting is optional but useful so that you don't see listings from other countries or cities",
+        "bio": "Short information",
+        "phoneVisibility": "Display phone number",
+        "emailVisibility": "Display email",
+        "theme": "Theme"
+    },
+
+    "catalog": {
+        "selectedCategory": "Selected category",
+        "newListing": "New listing!"
+    }
+}

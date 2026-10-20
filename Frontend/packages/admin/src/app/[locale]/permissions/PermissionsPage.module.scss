@@ -1,0 +1,28 @@
+@use "@core/css/components/global-mixins" as *;
+
+.selectedRole {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    height: 50px;
+    border-bottom: 2px dashed var(--border-color);
+
+    @include mobile {
+        display: flex;
+    }
+}
+
+.page {
+    @include flex-row;
+    flex: 1;
+    gap: 0.5rem;
+    min-height: 0;
+    position: relative;
+
+    @include mobile {
+        padding: 1rem 0;
+    }
+}

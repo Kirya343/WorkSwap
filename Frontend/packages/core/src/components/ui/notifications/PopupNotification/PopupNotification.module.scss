@@ -1,0 +1,52 @@
+@use "@core/css/components/global-mixins" as *;
+
+.notification {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.4rem 4rem;
+    border-radius: var(--radius);
+    margin: 0 auto;
+    width: max-content;
+    color: var(--permanent-light);
+    position: relative;
+
+    @include mobile {
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 0.4rem 2rem;
+        padding-right: 4rem;
+        border-radius: var(--radius);
+        margin: 0 auto;
+        width: fit-content;
+        color: var(--permanent-light);
+        position: relative;
+    }
+
+    &.success {
+        background-color: var(--success);
+    }
+
+    &.error {
+        background-color: #ec5f5f;
+    }
+
+    &.info {
+        background-color: var(--primary);
+    }
+}
+
+.close {
+    background-color: rgba(34, 34, 34, 0.24);
+    border-width: 0;
+    font-weight: 500;
+    color: #ffffff;
+    right: 1rem;
+    position: absolute;
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+
+    &:hover {
+        background-color: rgba(34, 34, 34, 0.137);
+        cursor: pointer;
+    }
+}

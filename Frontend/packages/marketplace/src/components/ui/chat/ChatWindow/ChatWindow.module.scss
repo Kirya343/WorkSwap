@@ -1,0 +1,190 @@
+@use "@core/css/components/global-mixins" as *;
+
+.chatWindow {
+    flex: 1;
+    @include flex-column;
+    background-color: var(--background);
+    border-radius: var(--radius);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 0;
+
+    @include mobile {
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 100vw;
+        height: calc(100dvh - var(--header-height));
+        background: var(--background-l1);
+        border-radius: 0;
+        max-height: none;
+        flex: none;
+        z-index: 99;
+        padding: 0 0.5rem;
+        transition: right 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding-bottom: 4rem;
+
+        &.show {
+            right: 0;
+        }
+    }
+
+    
+    /* &#EVENT_TOPIC {
+        max-height: 600px;
+
+        @include mobile {
+            position: static;
+            height: 100%;
+            padding-bottom: 0;
+        }
+    } */
+}
+
+.chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    background-color: var(--background-l1);
+    border-bottom: 1px solid var(--border-color);
+    gap: 0.5rem;
+
+    @include mobile {
+        padding: 0.5rem;
+    }
+}
+
+.chatInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    width: 50px;
+    flex: 1;
+
+    h4 {
+        font-size: 1rem;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    @include mobile {
+        align-items: center;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.mobileDialogsToggle {
+    display: none;
+    background-color: transparent;
+    border-width: 0;
+    color: var(--text-color);
+    height: 100%;
+    width: 30px;
+
+    @include mobile {
+        display: block;
+        margin: 0;
+    }
+}
+
+.userStatus {
+    font-size: 0.75rem;
+    color: var(--success-dark);
+    margin: 0;
+}
+
+.mobileActions {
+    display: none;
+    gap: 0.5rem;
+
+    @include mobile {
+        display: flex;
+    }
+
+    .action {
+        width: fit-content;
+
+        svg {
+            height: 100%;
+            width: 26px;
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.messagesContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    position: relative;
+    flex: 1;
+    padding: 0.5rem;
+    gap: 0.7rem;
+    overflow-y: auto;
+    background-color: var(--background-l1);
+    scrollbar-width: thin;
+
+    @include mobile {
+        background-color: var(--background);
+        padding-bottom: 0.5rem;
+        max-height: 100%;
+    }
+
+    .webSocketConnectionStatus {
+        position: absolute;
+        background-color: var(--danger);
+        padding: 0.3rem 0.7rem;
+        border-radius: var(--radius);
+        z-index: 100;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        left: 0;
+    }
+
+    .chatOrder {
+        background-color: var(--background-l2);
+        padding: 0.7rem;
+        @include flex-column;
+        align-items: center;
+
+        * {
+            width: fit-content;
+        }
+    }
+}
+
+.noSelectedChat {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .subTitle {
+        color: var(--text-color-l1);
+        font-size: 0.9rem;
+    }
+}

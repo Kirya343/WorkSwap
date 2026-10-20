@@ -1,0 +1,43 @@
+@use "@core/css/components/global-mixins" as *;
+
+.modal {
+    transition: all 0.2s ease;
+    border: 2px solid var(--border-color);
+    background: var(--background-l1);
+    padding: 2rem;
+    height: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    @include flex-column;
+    gap: 1rem;
+
+    &::backdrop {
+        background-color: rgba(56, 56, 56, 0.548);
+    }
+
+    &:not([open]) {
+        display: none;
+    }
+
+    .navbar-btn {
+        padding-left: 1rem;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+}

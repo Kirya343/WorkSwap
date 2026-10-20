@@ -1,0 +1,15 @@
+spring:
+  config:
+    import:
+      - classpath:config/s3.yml
+      - classpath:config/rabbitmq.yml
+      - classpath:config/database.yml
+      - classpath:config/main.yml
+      - classpath:config/logging.yml
+      - classpath:config/cors.yml
+      - optional:file:./config/s3.yml
+      - optional:file:./config/rabbitmq.yml
+      - optional:file:./config/database.yml
+      - optional:file:./config/main.yml
+      - optional:file:./config/logging.yml
+      - optional:file:./config/cors.yml

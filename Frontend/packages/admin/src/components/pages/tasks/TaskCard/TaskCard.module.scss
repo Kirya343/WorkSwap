@@ -1,0 +1,48 @@
+.card {
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    transition: 
+        background-color .2s ease-in,
+        transform .2s ease-in,
+        box-shadow .1s ease-in;
+
+    transition-delay: 0s, 0s, 0.1s;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px var(--shadow-color);
+        background-color: rgba(0,0,0,0.2);
+    }
+}
+    
+.meta {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .type {
+        background-color: #55555541;
+        padding: 2px 0.7rem;
+        font-size: 12px;
+        width: fit-content;
+        border-radius: 1rem;
+    }
+
+    .status {
+        padding: 2px 0.7rem;
+        font-size: 12px;
+        width: fit-content;
+        border-radius: 1rem;
+    }
+}
+
+.status-new { background-color: rgba(55, 158, 218, 0.4); }
+.status-in_progress { background-color: rgba(241, 238, 78, 0.4); }
+.status-completed { background-color: rgba(89, 189, 86, 0.4); }
+.status-canceled { background-color: rgba(255, 78, 78, 0.4); }

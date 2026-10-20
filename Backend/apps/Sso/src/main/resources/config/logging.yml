@@ -1,0 +1,15 @@
+logging:
+  file:
+    #name: logs/app.log
+  pattern:
+    console: "%d{HH:mm:ss yyyy-MM-dd} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.workswap.auth.core.security.service: DEBUG
+
+    org.springframework.web.multipart: INFO
+    org.springframework.web.servlet.resource: INFO
+    org.springframework.security: DEBUG
+
+    com.zaxxer.hikari: INFO
+    org.hibernate.SQL: INFO
+    org.hibernate.orm.jdbc.bind: INFO

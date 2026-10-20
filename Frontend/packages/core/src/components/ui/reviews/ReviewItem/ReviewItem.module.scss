@@ -1,0 +1,61 @@
+@use "@core/css/components/global-mixins" as *;
+
+.review {
+    padding: 1.5rem;
+    padding-bottom: 1.8rem;
+    background: var(--background);
+    border-radius: var(--radius);
+    position: relative;
+    width: max-content;
+    overflow: hidden;
+
+    
+    @include mobile {
+        min-width: 74vw;
+    }
+
+    span {
+        white-space: pre-line;
+        word-break: break-word;
+        flex-wrap: wrap;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.reviewer h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color-l1);
+}
+
+.rating {
+    color: var(--rating-star);
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.date {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    position: absolute;
+    font-size: 0.9rem;
+    color: var(--text-color-l1);
+}
+
+.content {
+    line-height: 1.6;
+}

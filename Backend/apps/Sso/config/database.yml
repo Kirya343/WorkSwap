@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    jdbc-url: jdbc:mariadb://sso-mariadb:3306/${SSO_MARIADB_DATABASE}?useSSL=false&serverTimezone=UTC # s4_WorkSwap_Center_Test тест
+    username: ${SSO_MARIADB_USER}
+    password: ${SSO_MARIADB_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+    connection-timeout: 30000
+    minimum-idle: 2
+    maximum-pool-size: 10
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    leak-detection-threshold: 30000
+    validation-timeout: 5000
+    keepalive-time: 300000

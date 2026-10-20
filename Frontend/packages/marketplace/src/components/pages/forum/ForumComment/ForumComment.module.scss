@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    gap: 1rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .header {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .authorName {
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+
+        .actions {
+            display: inline-flex;
+            gap: 0.5rem;
+        }
+    }
+
+    .date {
+        font-size: 0.9rem;
+        color: var(--text-color-l1)
+    }
+}

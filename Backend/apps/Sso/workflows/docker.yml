@@ -1,0 +1,63 @@
+name: Docker
+
+on:
+    push:
+        branches:
+            - main
+
+env:
+    REGISTRY: ghcr.io
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            packages: write
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Set up Java
+              uses: actions/setup-java@v4
+              with:
+                  distribution: temurin
+                  java-version: '21'
+                  cache: maven
+
+            - name: Configure Maven
+              run: |
+                  mkdir -p ~/.m2
+                  cat > ~/.m2/settings.xml <<EOF
+                  <settings>
+                      <servers>
+                          <server>
+                              <id>github</id>
+                              <username>${{ github.actor }}</username>
+                              <password>${{ secrets.GH_PACKAGES_TOKEN }}</password>
+                          </server>
+                      </servers>
+                  </settings>
+                  EOF
+
+            - name: Build applications
+              run: mvn install
+
+            - name: Log in to GHCR
+              uses: docker/login-action@v3
+              with:
+                  registry: ${{ env.REGISTRY }}
+                  username: ${{ github.actor }}
+                  password: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Build and push server
+              uses: docker/build-push-action@v6
+              with:
+                  context: .
+                  file: ./Dockerfile
+                  push: true
+                  tags: |
+                      ghcr.io/${{ github.repository_owner }}/salavion-sso:latest
+                      ghcr.io/${{ github.repository_owner }}/salavion-sso:${{ github.sha }}
