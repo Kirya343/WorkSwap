@@ -1,0 +1,88 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Server",
+            "type": "shell",
+            "command": "java -jar Backend/apps/Server/target/server-1.0.jar",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run Statistic",
+            "type": "shell",
+            "command": "java -jar Backend/apps/Statistic/target/statistic-1.0.jar",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run Sso",
+            "type": "shell",
+            "command": "java -jar apps/Sso/target/sso-1.0.jar",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run Marketplace",
+            "type": "shell",
+            "command": "cd Frontend/packages/marketplace && yarn dev",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run Admin",
+            "type": "shell",
+            "command": "cd Frontend/packages/admin && yarn dev",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "applications"
+            }
+        },
+        {
+            "label": "Run websites",
+            "dependsOn": [
+                "Run Frontend",
+                "Run Admin"
+            ],
+            "dependsOrder": "parallel"
+        },
+        {
+            "label": "Run applications",
+            "dependsOn": [
+                "Run Server",
+                "Run Statistic",
+                "Run Sso"
+            ],
+            "dependsOrder": "parallel"
+        },
+        {
+            "label": "Run project",
+            "dependsOn": [
+                "Run Server",
+                "Run Statistic",
+                "Run Sso",
+                "Run Frontend",
+                "Run Admin"
+            ],
+            "dependsOrder": "parallel"
+        }
+    ]
+}

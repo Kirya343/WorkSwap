@@ -1,0 +1,71 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Server",
+            "type": "node-terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Backend/apps/Server",
+            "command": "java -jar target/server-1.0.jar"
+        },
+        {
+            "name": "Statistic",
+            "type": "node-terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Backend/apps/Statistic",
+            "command": "java -jar target/statistic-1.0.jar"
+        },
+        {
+            "name": "Sso",
+            "type": "node-terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Backend/apps/Sso",
+            "command": "java -jar target/sso-1.0.jar"
+        },
+
+        {
+            "name": "Marketplace",
+            "type": "node-terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Frontend/packages/marketplace",
+            "command": "yarn dev"
+        },
+        {
+            "name": "Admin",
+            "type": "node-terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Frontend/packages/admin",
+            "command": "yarn dev"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run applications",
+            "configurations": [
+                "Server",
+                "Statistic",
+                "Sso"
+            ],
+            "stopAll": true
+        },
+        {
+            "name": "Run websites",
+            "configurations": [
+                "Marketplace",
+                "Admin"
+            ],
+            "stopAll": true
+        },
+        {
+            "name": "Run project",
+            "configurations": [
+                "Server",
+                "Statistic",
+                "Sso",
+                "Marketplace",
+                "Admin"
+            ],
+            "stopAll": true
+        }
+    ]
+}
