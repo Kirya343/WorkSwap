@@ -1,30 +1,30 @@
 api:
-  url: http://localhost:8083
+  url: ${API_URL}
 
 frontend:
-  url: http://localhost:30000
+  url: ${FRONTEND_URL}
 
 cloud:
-  url: https://cloud.workswap.org
+  url: ${CLOUD_URL}
 
 app:
   cookie:
-    secure: false
-    domain: "localhost"
-    sameSite: "Strict"
+    secure: true
+    domain: ".workswap.org"
+    sameSite: "None"
 
 tgbot:
-  url: http://localhost:30003
+  url: http://89.35.130.223:30003
 
-isTest: true
-
-salavion: 
-  url: http://localhost:8001
+isTest: false
 
 mailjet:
-  api-key: 1234321
-  secret-key: 123454321
-  sender: kirya343@gmail.com
+  api-key: ${MAILJET_API_KEY}
+  secret-key: ${MAILJET_SECRET_KEY}
+  sender: ${MAILJET_SENDER}
 
 deepl:
-  api-key: 123123
+  api-key: ${DEEPL_API_KEY}
+
+jwt:
+  public-key-location: file:${JWT_PUBLIC_KEY_LOCATION:./ssl/jwt-public.pem}
