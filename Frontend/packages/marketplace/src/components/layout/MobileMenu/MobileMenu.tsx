@@ -16,7 +16,7 @@ import styles from "./MobuleMenu.module.scss"
 import SignOutIcon from "@core/components/common/icons/SignOutIcon";
 import UnreadNotifications from "@core/components/ui/notifications/UnreadNotifications/UnreadNotifications";
 import BurgerIcon from "@core/components/common/icons/BurgerIcon"
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import SignInIcon from "@core/components/common/icons/SignInIcon";
 
 const MobileMenu = () => {

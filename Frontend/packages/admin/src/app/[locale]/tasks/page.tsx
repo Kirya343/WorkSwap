@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import TaskDetails from "../../../components/pages/tasks/TaskDetails/TaskDetails";
 import { ITask, ITaskCreate, IUserTasks } from "@core/lib/task/types";
 import { taskService } from "@core/lib/task/tasksService";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { Page } from "@core/lib/common/types/page"
 import { TasksContext } from "@core/lib/task/TasksContext";
 import Card from "@/components/ui/Card/Card";

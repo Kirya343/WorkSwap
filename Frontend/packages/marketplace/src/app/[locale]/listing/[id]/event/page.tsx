@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import NotFoundPage from "@core/pages/NotFoundPage";
 import { useParams, useSearchParams } from "next/navigation";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useI18n } from "@core/lib/common/contexts/I18nContext";
 import { IEventPageRequest } from "@core/lib/listing/types";
 import { IShortUser, IShortUserProfile } from "@core/lib/user/types";

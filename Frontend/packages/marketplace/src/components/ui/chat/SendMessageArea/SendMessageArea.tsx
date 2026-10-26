@@ -1,6 +1,6 @@
 "use client"
 
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useChats } from "@core/lib/chat/MessengerContext";
 import { useWebSocket } from "@core/lib/websocket/WebSocketContext";
 import { IChatMessage } from "@core/lib/chat/types";

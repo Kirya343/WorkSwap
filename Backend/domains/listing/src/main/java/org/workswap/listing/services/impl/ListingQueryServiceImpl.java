@@ -268,7 +268,7 @@ public class ListingQueryServiceImpl implements ListingQueryService {
         Listing listing = getListingById(listingId);
         ListingTranslation translation = translationRepository.findBestTranslation(listingId, locale);
 
-        securityFilterService.listingGetFilter(optAuthData.get(), listing, token);
+        securityFilterService.listingGetFilter(optAuthData.orElse(null), listing, token);
 
         mappingService.setListingCategoryMeta(listing);
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ListingGallery from "../ListingGallery/ListingGallery";
 import { IListingPageRequest } from "@core/lib/listing/types";
 import { IShortUserProfile } from "@core/lib/user/types";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useNotification } from "@core/lib/notification/NotificationContext";
 import { ICategory } from "@core/lib/category/types";
 import { listingService } from "@core/lib/listing/services";

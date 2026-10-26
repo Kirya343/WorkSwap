@@ -1,7 +1,7 @@
 "use client"
 
 import Avatar from "@core/components/common/Avatar/Avatar";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useI18n } from "@core/lib/common/contexts/I18nContext";
 import { IForumPost, IForumTopic } from "@core/lib/forum/types";
 import { IShortUser } from "@core/lib/user/types";

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ForumComment from "../ForumComment/ForumComment";
 import { IForumComment, IForumPost, IForumTopic } from "@core/lib/forum/types";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { IShortUser } from "@core/lib/user/types";
 import { forumService } from "@core/lib/forum/forumService";
 import Avatar from "@core/components/common/Avatar/Avatar";

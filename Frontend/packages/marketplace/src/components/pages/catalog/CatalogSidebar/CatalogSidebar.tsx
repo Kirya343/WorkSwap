@@ -6,7 +6,7 @@ const sorts = [
     { key: "likes"},
 ];
 
-import { useAuth } from '@core/lib/auth/AuthContext';
+import { useAuth } from '@core/lib/user/AuthContext';
 import { useI18n } from '@core/lib/common/contexts/I18nContext';
 import { useSwipeable } from 'react-swipeable';
 import styles from "./CatalogSidebar.module.scss"

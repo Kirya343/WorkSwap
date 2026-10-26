@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { IMessage } from '@stomp/stompjs';
 import { useChats } from "@core/lib/chat/MessengerContext";
 import { IChatDetails } from "@core/lib/chat/types";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useWebSocket } from "@core/lib/websocket/WebSocketContext";
 import { useI18n } from "@core/lib/common/contexts/I18nContext";
 

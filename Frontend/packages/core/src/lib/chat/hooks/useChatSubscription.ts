@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { IMessage } from '@stomp/stompjs';
 import { useChats } from "@core/lib/chat/MessengerContext";
 import { useWebSocket } from "@core/lib/websocket/WebSocketContext";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { IPageRequest } from "@core/lib/common/types/page";
 
 export function useChatSubscription() {

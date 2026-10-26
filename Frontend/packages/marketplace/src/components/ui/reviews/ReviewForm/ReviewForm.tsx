@@ -1,6 +1,6 @@
 "use client"
 
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useI18n } from "@core/lib/common/contexts/I18nContext";
 import { useNotification } from "@core/lib/notification/NotificationContext";
 import { Dispatch, SetStateAction, useState } from "react";

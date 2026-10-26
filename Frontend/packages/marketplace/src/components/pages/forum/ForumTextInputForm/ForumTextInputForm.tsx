@@ -2,7 +2,7 @@ import Avatar from "@core/components/common/Avatar/Avatar";
 import styles from "./ForumTextInputForm.module.scss"
 import Textarea from "@core/components/ui/primitives/Textarea/Textarea";
 import { useState } from "react";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import PaperPlaneIcon from "@core/components/common/icons/PaperPlaneIcon";
 import clsx from "clsx";
 

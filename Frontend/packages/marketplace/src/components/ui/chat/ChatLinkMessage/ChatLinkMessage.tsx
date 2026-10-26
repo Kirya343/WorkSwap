@@ -1,4 +1,4 @@
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useI18n } from "@core/lib/common/contexts/I18nContext";
 import { useChats } from "@core/lib/chat/MessengerContext";
 import { useChatsLoad } from "@core/lib/chat/hooks/useChatsLoad";

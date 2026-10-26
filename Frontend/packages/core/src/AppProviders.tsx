@@ -1,6 +1,6 @@
 "use client";
 
-import { AuthProvider } from "./lib/auth/AuthContext";
+import { AuthProvider } from "./lib/user/AuthContext";
 import { ActivePageProvider } from "./lib/common/contexts/ActivePageContext";
 import { ReactNode } from "react";
 import { WebSocketProvider } from "./lib/websocket/WebSocketContext";

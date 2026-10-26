@@ -2,7 +2,7 @@
 
 import Avatar from "@core/components/common/Avatar/Avatar";
 import RatingStars from "@core/components/common/RatingStars/RatingStars";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useNotification } from "@core/lib/notification/NotificationContext";
 import { userService } from "@core/lib/user/services";
 import { useEffect, useState } from "react";

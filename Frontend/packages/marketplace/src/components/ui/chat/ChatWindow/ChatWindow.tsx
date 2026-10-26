@@ -4,7 +4,7 @@ import { useRef, useEffect, useState, useMemo, useLayoutEffect } from "react";
 import SendMessageArea from "../SendMessageArea/SendMessageArea";
 import MessagesGroup from "../MessagesGroup/MessagesGroup";
 import { createPortal } from "react-dom";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useChats } from "@core/lib/chat/MessengerContext";
 import { IShortUser } from "@core/lib/user/types";
 import { ChatType, privateChatTypes } from "@core/lib/chat/constants/chatTypes"

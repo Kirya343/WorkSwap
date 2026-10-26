@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev --webpack -p 30000",
+    "dev": "next dev -p 30000",
     "build": "next build",
     "build:standalone": "next build && cp -r .next/static .next/standalone/packages/marketplace/.next/",
     "preview": "node  .next/standalone/packages/marketplace/server.js -p 30000",

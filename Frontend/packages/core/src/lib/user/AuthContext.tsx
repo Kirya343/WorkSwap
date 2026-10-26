@@ -1,8 +1,8 @@
 "use client"
 
 import { createContext, useContext } from "react";
-import { IShortUser, IUser } from "../user/types";
-import { userService } from "../user/services";
+import { IShortUser, IUser } from "./types";
+import { userService } from "./services";
 
 interface AuthContextType {
     isAuthenticated: boolean;

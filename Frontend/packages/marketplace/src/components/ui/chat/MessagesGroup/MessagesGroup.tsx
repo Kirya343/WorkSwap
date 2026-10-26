@@ -1,6 +1,6 @@
 import Avatar from "@core/components/common/Avatar/Avatar";
 import { privateChatTypes } from "@core/lib/chat/constants/chatTypes";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useChats } from "@core/lib/chat/MessengerContext";
 import { GroupedMessages, IChatMessage } from "@core/lib/chat/types";
 import styles from "./MessagesGroup.module.scss"

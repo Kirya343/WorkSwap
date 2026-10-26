@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { GroupedMessages, IChat, IChatDetails, IChatMessage } from "./types";
 import { Order } from "../order/types";
-import { useAuth } from "../auth/AuthContext";
+import { useAuth } from "../user/AuthContext";
 import { useWebSocket } from "../websocket/WebSocketContext";
 import useMessengerState from "./hooks/useMessengerState";
 

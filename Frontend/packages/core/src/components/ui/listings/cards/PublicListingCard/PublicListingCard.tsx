@@ -1,7 +1,7 @@
 "use client"
 
 import { IShortListing } from "@core/lib/listing/types";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { listingService } from "@core/lib/listing/services";
 import PriceTypes from "@core/components/common/PriceTypes/PriceTypes"
 import { listingTypesWithRating } from "@core/lib/listing/constants/listingTypes";

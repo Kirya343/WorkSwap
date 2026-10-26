@@ -1,7 +1,7 @@
 "use client"
 
 import { useNotification } from "@core/lib/notification/NotificationContext";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { IShortUserProfile } from "@core/lib/user/types";
 import Avatar from "@core/components/common/Avatar/Avatar";
 import PhoneIcon from '@core/components/common/icons/contacts/PhoneIcon';

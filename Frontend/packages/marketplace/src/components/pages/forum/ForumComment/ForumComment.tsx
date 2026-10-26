@@ -1,7 +1,7 @@
 import Avatar from "@core/components/common/Avatar/Avatar";
 import FormattedDateToNow from "@core/components/common/date/FormattedDateToNow";
 import ActionMenu from "@core/components/ui/ActionMenu/ActionMenu";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { forumService } from "@core/lib/forum/forumService";
 import { IForumComment, IForumTopic } from "@core/lib/forum/types";
 import styles from "./ForumComment.module.scss"

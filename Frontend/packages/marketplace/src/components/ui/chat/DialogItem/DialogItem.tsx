@@ -2,7 +2,7 @@
 
 import Avatar from "@core/components/common/Avatar/Avatar";
 import { ChatType } from "@core/lib/chat/constants/chatTypes";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { useChats } from "@core/lib/chat/MessengerContext";
 import { IChat } from "@core/lib/chat/types";
 import { useSearchParams } from "next/navigation";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ITaskComment } from "@core/lib/task/types";
-import { useAuth } from "@core/lib/auth/AuthContext";
+import { useAuth } from "@core/lib/user/AuthContext";
 import { taskService } from "@core/lib/task/tasksService"
 import Avatar from "@core/components/common/Avatar/Avatar";
 import styles from "./TaskComments.module.scss"
