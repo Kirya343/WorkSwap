@@ -1,2 +1,2 @@
 api:
-  url: http://localhost:8083
+  url: ${API_URL}

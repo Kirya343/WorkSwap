@@ -4,13 +4,13 @@ spring:
       client:
         registration:
           google:
-            client-id: 
-            client-secret: 
+            client-id: ${GOOGLE_OAUTH_CLIENT_ID}
+            client-secret: ${GOOGLE_OAUTH_CLIENT_SECRET}
             scope:
               - openid
               - profile
               - email
-            redirect-uri: http://localhost:8001/login/oauth2/code/google
+            redirect-uri: ${AUTH_URL}/login/oauth2/code/google
             authorization-grant-type: authorization_code
             client-name: Google
         provider:
