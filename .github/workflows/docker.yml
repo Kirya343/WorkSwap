@@ -102,17 +102,12 @@ jobs:
               run: yarn install --immutable
 
             - name: Build marketplace
+              working-directory: Frontend
               run: yarn workspace workswap-marketplace build
 
             - name: Build admin
+              working-directory: Frontend
               run: yarn workspace workswap-admin build
-
-            - name: Log in to GHCR
-              uses: docker/login-action@v3
-              with:
-                  registry: ${{ env.REGISTRY }}
-                  username: ${{ github.actor }}
-                  password: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Build and push marketplace
               uses: docker/build-push-action@v6
