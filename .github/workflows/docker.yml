@@ -7,7 +7,8 @@ on:
 
 env:
     REGISTRY: ghcr.io
-
+    IMAGE_OWNER: kirya343
+    
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -19,6 +20,9 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+
+            - name: Set lowercase image owner
+              run: echo "IMAGE_OWNER=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_ENV"
 
             - name: Set up Java
               uses: actions/setup-java@v4
@@ -59,8 +63,8 @@ jobs:
                   file: ./Backend/apps/Sso/Dockerfile
                   push: true
                   tags: |
-                      ghcr.io/${{ github.repository_owner }}/workswap-sso:latest
-                      ghcr.io/${{ github.repository_owner }}/workswap-sso:${{ github.sha }}
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-sso:latest
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-sso:${{ github.sha }}
 
             - name: Build and push server
               uses: docker/build-push-action@v6
@@ -69,8 +73,8 @@ jobs:
                   file: ./Backend/apps/Server/Dockerfile
                   push: true
                   tags: |
-                      ghcr.io/${{ github.repository_owner }}/workswap-server:latest
-                      ghcr.io/${{ github.repository_owner }}/workswap-server:${{ github.sha }}
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-server:latest
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-server:${{ github.sha }}
 
             - name: Build and push statistics
               uses: docker/build-push-action@v6
@@ -79,8 +83,8 @@ jobs:
                   file: ./Backend/apps/Statistic/Dockerfile
                   push: true
                   tags: |
-                      ghcr.io/${{ github.repository_owner }}/workswap-statistics:latest
-                      ghcr.io/${{ github.repository_owner }}/workswap-statistics:${{ github.sha }}
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-statistics:latest
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-statistics:${{ github.sha }}
 
                       
 
@@ -116,8 +120,8 @@ jobs:
                   file: ./Frontend/packages/marketplace/Dockerfile
                   push: true
                   tags: |
-                      ghcr.io/${{ github.repository_owner }}/workswap-frontend:latest
-                      ghcr.io/${{ github.repository_owner }}/workswap-frontend:${{ github.sha }}
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-frontend:latest
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-frontend:${{ github.sha }}
 
             - name: Build and push admin
               uses: docker/build-push-action@v6
@@ -126,5 +130,5 @@ jobs:
                   file: ./Frontend/packages/admin/Dockerfile
                   push: true
                   tags: |
-                      ghcr.io/${{ github.repository_owner }}/workswap-admin:latest
-                      ghcr.io/${{ github.repository_owner }}/workswap-admin:${{ github.sha }}
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-admin:latest
+                      ghcr.io/${{ env.IMAGE_OWNER }}/workswap-admin:${{ github.sha }}
