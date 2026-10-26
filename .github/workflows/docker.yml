@@ -43,7 +43,7 @@ jobs:
                   EOF
 
             - name: Build applications
-              run: mvn install -DskipTests
+              run: mvn-f Backend/pom.xml install -DskipTests
 
             - name: Log in to GHCR
               uses: docker/login-action@v3
