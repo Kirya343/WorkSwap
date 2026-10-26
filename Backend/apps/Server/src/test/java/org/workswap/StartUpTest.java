@@ -5,6 +5,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.workswap.server.ServerApplication;
 import org.workswap.storage.config.S3Properties;
 
 import software.amazon.awssdk.services.s3.S3Client;
