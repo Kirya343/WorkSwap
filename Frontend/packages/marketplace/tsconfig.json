@@ -7,10 +7,9 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
-    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "@core/*": [
         "../core/src/*"
@@ -42,7 +41,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "next.config.ts"
-, "../core/src/components/ui/Breadcrumbs", "../core/src/components/ui/Pagination", "../core/src/components/ui/reviews/ReviewItem"  ],
+  ],
   "exclude": [
     "node_modules",
     "**/node_modules/*",

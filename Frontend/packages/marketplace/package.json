@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev -p 30000",
+    "dev": "next dev --webpack -p 30000",
     "build": "next build",
     "build:standalone": "next build && cp -r .next/static .next/standalone/packages/marketplace/.next/",
     "preview": "node  .next/standalone/packages/marketplace/server.js -p 30000",
@@ -17,6 +17,7 @@
     "@radix-ui/react-popover": "^1.1.23",
     "@stomp/stompjs": "^7.1.1",
     "@types/js-cookie": "^3.0.6",
+    "@workswap/frontend-core": "workspace:*",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "i18next": "^26.0.8",
@@ -33,7 +34,7 @@
     "react-swipeable": "^7.0.2",
     "react-transition-group": "^4.4.5",
     "sass": "^1.97.3",
-    "sass-embedded": "^1.93.2",
+    "sass-embedded": "^1.106.1",
     "stompjs": "^2.3.3",
     "typed-scss-modules": "^8.1.1",
     "typescript": "^5.9.3"

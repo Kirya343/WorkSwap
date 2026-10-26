@@ -15,7 +15,7 @@ import ListingDetail from "@/components/pages/listing/ListingDetail/ListingDetai
 const ListingPage = () => {
 
     const { id } = useParams();
-    const listigId = Number(id);
+    const listingId = Number(id);
     const { dict } = useI18n();
 
     const [listingPage, setListing] = useState<IListingPageRequest | null>(null);
@@ -23,13 +23,18 @@ const ListingPage = () => {
     const [error, setError] = useState<boolean>(false);
 
     useEffect(() => {
-        listingService.getPageById(listigId)
-            .then(listing => {
-                setListing(listing)
-                setAuthor(listing.author)
-            })
-            .catch(() => setError(true))
-    }, [listigId]);
+        async function loadPage(listingId: number) {
+            try {
+                const data = await listingService.getPageById(listingId);
+                setListing(data)
+                setAuthor(data.author)
+            } catch {
+                setError(true)
+            }
+        }
+
+        if (listingId) loadPage(listingId)
+    }, [listingId]);
 
     if (error) return <NotFoundPage/>;
 

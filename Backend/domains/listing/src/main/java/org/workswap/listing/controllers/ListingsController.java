@@ -49,7 +49,7 @@ public class ListingsController {
     private final ListingStorageService listingStorageService;
 
     @GetMapping("/{listingId}")
-    @RequiredPermission("GET_LISTING_BY_ID")
+    @PublicEndpoint
     public FullListingDTO getListing(
             @AuthUser UserAuthData authData, 
             @PathVariable Long listingId, 
